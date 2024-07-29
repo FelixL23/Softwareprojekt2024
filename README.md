@@ -8,5 +8,10 @@ Mir war vollständig das Archiv zugewiesen sprich alles was zum Archiv gehört (
 Meine  E2E Tests die ich geschrieben habe sind ChangeTaskStatusTest, TaskToRole und TaskToUser (alle in TaskInst)
 Meine Unit Tests sind die in ProcedureTemplateTests (in Ordner ProcedureTemplate)
 
+Login daten:
+username: mustmax
+password: Passwort
+
+
 Viele Grüße,
 Felix Linse

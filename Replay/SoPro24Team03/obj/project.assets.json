@@ -2630,11 +2630,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Felix\\Softwareprojekt\\Replay\\SoPro24Team03\\SoPro24Team03.csproj",
+      "projectUniqueName": "C:\\Users\\Felix\\Softwareprojekt2024\\Replay\\SoPro24Team03\\SoPro24Team03.csproj",
       "projectName": "SoPro24Team03",
-      "projectPath": "C:\\Users\\Felix\\Softwareprojekt\\Replay\\SoPro24Team03\\SoPro24Team03.csproj",
+      "projectPath": "C:\\Users\\Felix\\Softwareprojekt2024\\Replay\\SoPro24Team03\\SoPro24Team03.csproj",
       "packagesPath": "C:\\Users\\Felix\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Felix\\Softwareprojekt\\Replay\\SoPro24Team03\\obj\\",
+      "outputPath": "C:\\Users\\Felix\\Softwareprojekt2024\\Replay\\SoPro24Team03\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Felix\\AppData\\Roaming\\NuGet\\NuGet.Config"

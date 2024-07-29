@@ -8,157 +8,157 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SoPro24Team03
 build_property.RootNamespace = SoPro24Team03
-build_property.ProjectDir = C:\Users\Felix\Softwareprojekt\Replay\SoPro24Team03\
+build_property.ProjectDir = C:\Users\Felix\Softwareprojekt2024\Replay\SoPro24Team03\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Felix\Softwareprojekt\Replay\SoPro24Team03
+build_property.MSBuildProjectDirectory = C:\Users\Felix\Softwareprojekt2024\Replay\SoPro24Team03
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/Archiv/ArchivedProcedure.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/Archiv/ArchivedProcedure.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJjaGl2XEFyY2hpdmVkUHJvY2VkdXJlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/Archiv/ArchivedTaskList.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/Archiv/ArchivedTaskList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJjaGl2XEFyY2hpdmVkVGFza0xpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/Archiv/ArchivedUser.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/Archiv/ArchivedUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJjaGl2XEFyY2hpdmVkVXNlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/Archiv/index.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/Archiv/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJjaGl2XGluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/Authentication/Index.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/Authentication/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/Authentication/Logout.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/Authentication/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cTG9nb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/Home/Index.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/Home/Privacy.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/ProcedureTemplate/Create.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/ProcedureTemplate/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2VkdXJlVGVtcGxhdGVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/ProcedureTemplate/Edit.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/ProcedureTemplate/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2VkdXJlVGVtcGxhdGVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/ProcedureTemplate/Index.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/ProcedureTemplate/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2VkdXJlVGVtcGxhdGVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/ProcedureTemplate/_Details.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/ProcedureTemplate/_Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2VkdXJlVGVtcGxhdGVcX0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/Procedure/Create.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/Procedure/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2VkdXJlXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/Procedure/Edit.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/Procedure/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2VkdXJlXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/Procedure/Index.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/Procedure/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2VkdXJlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/Role/Create.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/Role/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/Role/Edit.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/Role/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/Role/Index.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/Role/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/Shared/Error.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/TaskInst/Create.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/TaskInst/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza0luc3RcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/TaskInst/CreateNote.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/TaskInst/CreateNote.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza0luc3RcQ3JlYXRlTm90ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/TaskInst/Delete.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/TaskInst/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza0luc3RcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/TaskInst/DeleteNote.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/TaskInst/DeleteNote.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza0luc3RcRGVsZXRlTm90ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/TaskInst/Edit.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/TaskInst/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza0luc3RcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/TaskInst/EditNote.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/TaskInst/EditNote.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza0luc3RcRWRpdE5vdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/TaskInst/Index.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/TaskInst/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza0luc3RcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/TaskTemplate/Create.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/TaskTemplate/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza1RlbXBsYXRlXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/TaskTemplate/Edit.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/TaskTemplate/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza1RlbXBsYXRlXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/TaskTemplate/Index.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/TaskTemplate/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza1RlbXBsYXRlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/TaskTemplate/_Instruction.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/TaskTemplate/_Instruction.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza1RlbXBsYXRlXF9JbnN0cnVjdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/Usermanagement/UserAdd.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/Usermanagement/UserAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcm1hbmFnZW1lbnRcVXNlckFkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/Usermanagement/UserEdit.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/Usermanagement/UserEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcm1hbmFnZW1lbnRcVXNlckVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/Usermanagement/UserOverview.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/Usermanagement/UserOverview.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcm1hbmFnZW1lbnRcVXNlck92ZXJ2aWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/_ViewImports.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/_ViewStart.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felix/Softwareprojekt/Replay/SoPro24Team03/Views/Shared/_Layout.cshtml]
+[C:/Users/Felix/Softwareprojekt2024/Replay/SoPro24Team03/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-hcckv8nh53
