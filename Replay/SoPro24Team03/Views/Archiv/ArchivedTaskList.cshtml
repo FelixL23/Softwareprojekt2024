@@ -1,0 +1,27 @@
+@model SoPro24Team03.ViewModels.ArchivedProcedureViewModel
+<!-- made by Felix -->
+<h1>Aufgaben des archivierten Vorgangs: @Model.Name</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Zuständiger</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var task in Model.TaskInsts)
+        {
+            <tr>
+                <td>@task.Id</td>
+                <td>@task.Name</td>
+                <td>@task.Resp.DisplayName()</td>
+                <td>@task.Status</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a class="btn btn-secondary" href="@Url.Action("ArchivedProcedure", "Archiv")">Zurück</a>

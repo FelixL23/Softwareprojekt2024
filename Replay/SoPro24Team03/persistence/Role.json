@@ -1,0 +1,27 @@
+[
+  {
+    "Id": 1,
+    "Name": "Administratoren",
+    "IsAdmin": true
+  },
+  {
+    "Id": 2,
+    "Name": "IT",
+    "IsAdmin": false
+  },
+  {
+    "Id": 3,
+    "Name": "Backoffice",
+    "IsAdmin": false
+  },
+  {
+    "Id": 4,
+    "Name": "Gesch\u00E4ftsleitung",
+    "IsAdmin": false
+  },
+  {
+    "Id": 5,
+    "Name": "Personal",
+    "IsAdmin": false
+  }
+]

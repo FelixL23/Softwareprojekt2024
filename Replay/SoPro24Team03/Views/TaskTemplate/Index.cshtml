@@ -1,0 +1,204 @@
+@model SoPro24Team03.ViewModels.TaskTemplateViewModel;
+@using Markdig
+
+@{
+    ViewData["Title"] = "Aufgabenvorlagen";
+}
+
+<style>
+    .card {
+        background-color: var(--replay-grey2);
+        color: var(--replay-white)
+    }
+</style>
+
+<div class="d-flex justify-content-between pb-3">
+    <div class="d-flex gap-3">
+        <button class="btn btn-primary">Suchen</button>
+        <button class="btn btn-primary">Filter</button>
+    </div>
+    <a class="btn btn-primary" asp-controller="TaskTemplate" asp-area="" asp-action="Create">Hinzufügen</a>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Zuständiger</th>
+            <th scope="col">Zieldatum</th>
+            <th scope="col">Abteilungen</th>
+            <th scope="col">Vertragsart</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var task in Model.TaskTemplates)
+        {
+            <tr id="taskTemplateTableRow">
+                <td>@task.Name</td>
+                <td>
+                    @if (task.TaskResponsible == null)
+                    {
+                        <span>TODO</span>
+                    }
+                    else
+                    {
+                        @if (task.TaskResponsible.TaskRespType == TaskRespType.role && task.TaskResponsible.Role != null)
+                        {
+                            <span>Rolle: @task.TaskResponsible.Role.Name</span>
+                        }
+                        else
+                        {
+                            @task.TaskResponsible.TaskRespType.GetDisplayName()
+                        }
+                    }
+                </td>
+                <td>
+                    @if (task.DueType == DueType.custom)
+                    {
+                        @if (task.CustomDays < 0)
+                        {
+                            <span>@Math.Abs(task.CustomDays.Value) Tage bevor</span>
+                        }
+                        else
+                        {
+                            @if (task.CustomDays != null)
+                            {
+                                <span>Nach @task.CustomDays Tagen</span>
+                            }
+                        }
+                    }
+                    else
+                    {
+                        @task.DueType.GetDisplayName()
+                    }
+                </td>
+                <td>
+                    @if (task.Departments.Count() == 0)
+                    {
+                        <span>Keine Einschränkung</span>
+                    }
+                    else
+                    {
+                        @string.Join(", ", task.Departments.Select(e => e.Name))
+                    }
+                </td>
+                <td style="overflow-x: hidden;">
+                    @if (task.ContractTypes.Count() == 0)
+                    {
+                        <span>
+                            Keine Einschränkung
+                        </span>
+                    }
+                    else
+                    {
+                        @string.Join(", ", task.ContractTypes.Select(e => e.GetDisplayName()))
+                    }
+                </td>
+                <td>
+                    <button id="instruction-button" type="button" class="btn btn-primary" onclick="loadContent(this)"
+                        data-id="@task.Id" data-instruction="@task.Instruction" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Anleitung öffnen">
+                        <i class="bi bi-info"></i>
+                    </button>
+                    <a class="btn btn-primary" asp-area="" asp-controller="TaskTemplate" asp-action="Edit"
+                        asp-route-id="@task.Id" data-bs-toggle="tooltip" data-bs-placement="top" title="Bearbeiten">
+                        <i class="bi bi-pencil"> </i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div id="instructionModal" class="modal" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Anleitung</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="instruction-container" class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Schließen</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#taskTemplateTableRow td button').each(function (e) {
+                var instruction = $(this).data('instruction');
+
+                if (!instruction) {
+                    $(this).prop("disabled", true)
+                }
+            })
+        })
+
+        function loadContent(button) {
+            var id = button.getAttribute("data-id");
+
+            $.ajax({
+                url: '@Url.Action("GetInstruction", "TaskTemplate")',
+                data: { id: id },
+                success: function (data) {
+                    $('#instruction-container').load('/TaskTemplate/GetInstruction/' + id)
+                    $('#instructionModal').modal('show')
+                }
+            })
+        }
+    </script>
+}
+
+@*
+<div class="container">
+<h1>Aufgabenvorlagen</h1>
+
+<div class="d-flex justify-content-evenly">
+@foreach (var taskTemplate in Model.TaskTemplates)
+{
+<div class="card" style="width: 24rem;">
+<div class="card-body">
+<h5 class="card-title">@taskTemplate.Name</h5>
+<hr />
+<div class="card-text">
+@if (taskTemplate.TaskResponsible != null && taskTemplate.TaskResponsible.TaskRespType != null)
+{
+<p>Zuständiger: @taskTemplate.TaskResponsible.TaskRespType.GetDisplayName()</p>
+}
+<p>Fälligkeitsart: @taskTemplate.DueType.GetDisplayName()</p>
+<p>Vertragsart: keine Einschränkungen</p>
+<div>
+Abteilung:
+@if (taskTemplate.Departments.Count() == 0)
+{
+<span>Keine Abteilungen!</span>
+}
+else
+{
+<ul>
+@foreach (var department in @taskTemplate.Departments)
+{
+<li>@department.Name</li>
+}
+</ul>
+}
+</div>
+</div>
+@if (taskTemplate.Instruction != null)
+{
+<pre>@taskTemplate.Instruction.Text</pre>
+}
+<div>
+<a asp-area="" asp-controller="TaskTemplate" asp-action="Edit" asp-route-id="@taskTemplate.Id"
+class="btn btn-primary">Bearbeiten</a>
+</div>
+</div>
+</div>
+}
+</div>
+</div> *@

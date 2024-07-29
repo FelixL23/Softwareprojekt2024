@@ -1,0 +1,44 @@
+body {
+    background-color: var(--replay-secondary);
+    color: var(--replay-locorice);
+}
+
+.no-item-card {
+    background-color: var(--replay-silver);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.task-card {
+    background-color: var(--replay-silver);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.task-status {
+    font-weight: bold;
+}
+
+.status-in-progress {
+    color: white;
+    background-color: var(--replay-secondary);
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.status-overdue {
+    color: white;
+    background-color: var(--replay-amaranth);
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.see-more {
+    background-color: var(--replay-silver);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}

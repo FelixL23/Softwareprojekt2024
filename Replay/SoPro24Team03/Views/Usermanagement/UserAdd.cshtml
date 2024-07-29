@@ -1,0 +1,129 @@
+@model SoPro24Team03.ViewModels.UserAddViewModel;
+
+@{
+    ViewData["Title"] = "Benutzer hinzufügen";
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href='https://fonts.googleapis.com/css?family=League+Spartan:wght@700&family=Open+Sans:wght@300..800&display=Swap'
+        rel='stylesheet'>
+    <link rel="stylesheet" href="~/css/replay.css"/>
+</head>
+
+<body>
+    <div class="main-content">
+        <div class="add-user">
+            <div class="user-details">
+                <form asp-action="UserAdd" method="post">
+
+                    <div class="form-group">
+                        <label asp-for="FirstName" class="control-label">Vorname:</label>
+                        <input asp-for="FirstName" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="LastName" class="control-label">Nachname:</label>
+                        <input asp-for="LastName" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label"></label>
+                        <input asp-for="Password" class="form-control" type="password" />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="DateOfBirth" class="control-label">Geburtsdatum:</label>
+                        <input asp-for="DateOfBirth" class="form-control"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="ContractStart" class="control-label">Vertragsbeginn:</label>
+                        <input asp-for="ContractStart" class="form-control"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="ContractType" class="control-label">Vertragsart:</label>
+                        <select asp-for="ContractType" class="form-control" asp-items="Model.ContractTypeList">
+                            <option value="">bitte auswählen</option>
+                        </select>
+                        <span asp-validation-for="ContractType" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Abteilung:</label>
+                        <select asp-for="SelectedDepartmentId" asp-items="@Model.AllDepartments"></select>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="SelectedRoleIds" class="control-label">Rolle:</label>
+                        <select asp-for="SelectedRoleIds" class="role-select form-select" multiple="multiple" asp-items="Model.AllRoles">
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="EmailAddress" class="control-label">e-Mail:</label>
+                        <input asp-for="EmailAddress" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="isSuspended" class="control-label">Gesperrt:</label>
+                        <input asp-for="isSuspended" type="checkbox" />
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary" asp-controller="Usermanagement" asp-action="UserAdd">Nutzer hinzufügen</button>
+                    </div>
+                </form>
+                
+                <a class="btn btn-cancel" asp-area="" asp-controller="Usermanagement" asp-action="UserOverview">Abbruch</a>
+            </div>  
+        </div>
+    </div>
+</body>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        $(document).ready(function() {
+            $('.role-select').select2();
+        })
+    </script>
+}
+
+<style>
+    .main-content {
+        padding: 20px;
+    }
+
+    .add-user {
+        display: flex;
+        justify-content: space-between;
+        background-color: #AFAFAF;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    body {
+        background-color: #4d5456;
+    }
+
+    .user-details {
+        flex: 1;
+    }
+
+    .form-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .form-group label {
+        width: 150px; 
+        margin-right: 10px; 
+    }
+</style>
+

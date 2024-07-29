@@ -1,0 +1,138 @@
+@model SoPro24Team03.ViewModels.UserOverviewViewModel;
+
+@{
+    ViewData["Title"] = "Benutzerliste";
+}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href='https://fonts.googleapis.com/css?family=League+Spartan:wght@700&family=Open+Sans:wght@300..800&display=Swap'
+        rel='stylesheet'>
+    <link rel="stylesheet" href="~/css/replay.css"/>
+</head>
+
+<body>
+    <div class="main-content">
+        <div class="header">
+            
+            <a class="btn btn-primary" asp-area="" asp-controller="Usermanagement" asp-action="UserAdd">Hinzufügen</a>
+        </div>
+
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Geburtsdatum</th>
+                    <th>Rolle</th>
+                    <th>Status</th>
+                    <th>Einstellungen</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model.Users)
+                {
+                    <tr>
+                        <td>@user.FirstName @user.LastName</td>
+                        <td>@user.DateOfBirth.ToString("dd.MM.yyyy")</td>
+                        <td>
+                            @if (user.Roles != null && user.Roles.Count > 0)
+                            {
+                                @user.Roles.ElementAt(0).Name
+                            }
+                            else
+                            {
+                                <span>Keine Rolle</span>
+                            }
+                        </td>
+                        <td>
+                            <span class="status @(user.isSuspended ? "gesperrt" : "aktiv")">@((user.isSuspended ? "Gesperrt" : "Aktiv"))</span>
+                        </td>
+
+                        <td>
+                            <a class="btn btn-primary" asp-area="" asp-controller="Usermanagement" asp-action="UserEdit" asp-route-id="@user.Id">
+                                <i class="bi bi-pencil"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+<style>
+    
+    .main-content {
+        padding: 20px;
+    }
+
+    body {
+        background-color: #4d5456;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .filter-btn,
+    .add-btn {
+        background-color: #141210;
+        color: #fff;
+        border: none;
+    }
+
+    .user-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .user-table th,
+    .user-table td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    .user-table th {
+        background-color: #141210;
+        color: #fff;
+    }
+
+    .user-table tr:nth-child(even) {
+        background-color: #DBDBDB;
+        color: #141210
+    }
+
+    .user-table tr:nth-child(odd) {
+        background-color: #afafaf;
+        color: #141210
+    }
+
+    .status {
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    .status.active {
+        background-color: #626262;
+        color: #fff;
+    }
+
+    .status.gesperrt {
+        background-color: #e61d47;
+        color: #fff;
+    }
+
+</style>
+
+</html>
+

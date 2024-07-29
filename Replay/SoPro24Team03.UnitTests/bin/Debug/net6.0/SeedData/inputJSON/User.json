@@ -1,0 +1,208 @@
+[
+  {
+    "Id": 3,
+    "UserName": "mustmax",
+    "FirstName": "Maximilian",
+    "LastName": "Musterman",
+    "DateOfBirth": "2000-01-01T00:00:00",
+    "ContractStart": "2020-01-01T00:00:00",
+    "ContractType": 0,
+    "EmailAddress": "max.musterman@xyz.de",
+    "PasswordHash": "$2a$11$fZxeW1x8l7jfuRlJNpCWReJANTTt79EN2SUYAXdX9TcOTO2jGh/9u",
+    "Roles": [
+      {
+        "Id": 1,
+        "Name": "Administratoren",
+        "IsAdmin": true
+      }
+    ],
+    "DepartmentId": 2,
+    "isArchived": false,
+    "isSuspended": false,
+    "changedInitialPassword": false,
+    "Notes": null
+  },
+  {
+    "Id": 4,
+    "UserName": "woodwoo",
+    "FirstName": "Woody",
+    "LastName": "Woodpecker",
+    "DateOfBirth": "2001-04-04T00:00:00",
+    "ContractStart": "2020-01-01T00:00:00",
+    "ContractType": 1,
+    "EmailAddress": "woody.woodpecker@xyz.de",
+    "PasswordHash": "$2a$11$1Hz1NWhinRRfuHTOdvLFv.IPoX.zJosAL8A46Nj5tIHUhEsf5G/3y",
+    "Roles": [
+      {
+        "Id": 5,
+        "Name": "Personal",
+        "IsAdmin": false
+      }
+    ],
+    "DepartmentId": 6,
+    "isArchived": false,
+    "isSuspended": false,
+    "changedInitialPassword": false,
+    "Notes": null
+  },
+  {
+    "Id": 5,
+    "UserName": "karl",
+    "FirstName": "heinz",
+    "LastName": "karl",
+    "DateOfBirth": "2000-01-01T00:00:00",
+    "ContractStart": "0001-01-01T00:00:00",
+    "ContractType": 1,
+    "EmailAddress": "max.musterman@xyz.de",
+    "PasswordHash": "$2a$11$AJI7rpL/PXZ3yuy5M4OFRuB.iAV5zfRwXupdfDFSe7BdR/cqAccTa",
+    "Roles": [
+      {
+        "Id": 3,
+        "Name": "Backoffice",
+        "IsAdmin": false
+      }
+    ],
+    "DepartmentId": 2,
+    "isArchived": true,
+    "isSuspended": false,
+    "changedInitialPassword": true,
+    "Notes": null
+  },
+  {
+    "Id": 6,
+    "UserName": "admin",
+    "FirstName": "Ministrator",
+    "LastName": "Ad",
+    "DateOfBirth": "1999-09-09T00:00:00",
+    "ContractStart": "2020-01-01T00:00:00",
+    "ContractType": 0,
+    "EmailAddress": "admin@replay.de",
+    "PasswordHash": "$2a$11$v5BYq56EGVCMwqTJdtk2duHletW2QSt8wwyIAcEDhRo7APb2ZYaI6",
+    "Roles": [
+      {
+        "Id": 1,
+        "Name": "Administratoren",
+        "IsAdmin": true
+      }
+    ],
+    "DepartmentId": 2,
+    "isArchived": false,
+    "isSuspended": false,
+    "changedInitialPassword": false,
+    "Notes": null
+  },
+  {
+    "Id": 7,
+    "UserName": "vaugkoe",
+    "FirstName": "K\u00F6nig",
+    "LastName": "v. Augsburg",
+    "DateOfBirth": "1977-07-07T00:00:00",
+    "ContractStart": "2020-01-01T00:00:00",
+    "ContractType": 0,
+    "EmailAddress": "koenig@replay.de",
+    "PasswordHash": "$2a$11$qHNs2NAc9pNn42D63PTA3egaUOaXqxOUg0hDUVtSKbnZNzGHeCorC",
+    "Roles": [
+      {
+        "Id": 4,
+        "Name": "Gesch\u00E4ftsleitung",
+        "IsAdmin": false
+      }
+    ],
+    "DepartmentId": 4,
+    "isArchived": false,
+    "isSuspended": false,
+    "changedInitialPassword": false,
+    "Notes": null
+  },
+  {
+    "Id": 8,
+    "UserName": "gerhger",
+    "FirstName": "Gerhard",
+    "LastName": "Gerhard",
+    "DateOfBirth": "1988-02-02T00:00:00",
+    "ContractStart": "2020-01-01T00:00:00",
+    "ContractType": 0,
+    "EmailAddress": "gerhard@aol.com",
+    "PasswordHash": "$2a$11$qPZp2SmEke8NTr8PVIfz6ee3emY6v7QViWOnKfPjJNPPHoviosIv.",
+    "Roles": [
+      {
+        "Id": 3,
+        "Name": "Backoffice",
+        "IsAdmin": false
+      }
+    ],
+    "DepartmentId": 5,
+    "isArchived": false,
+    "isSuspended": false,
+    "changedInitialPassword": false,
+    "Notes": null
+  },
+  {
+    "Id": 9,
+    "UserName": "yardbil",
+    "FirstName": "Bill",
+    "LastName": "Yard",
+    "DateOfBirth": "2004-02-29T00:00:00",
+    "ContractStart": "0001-01-01T00:00:00",
+    "ContractType": 2,
+    "EmailAddress": "billyard456@t-online.de",
+    "PasswordHash": "$2a$11$NY5Mrm0.ugIh7NI/pQpQQOXOAKBQkpY0uwxf9.qkg2xsTO0wjRIbK",
+    "Roles": [
+      {
+        "Id": 3,
+        "Name": "Backoffice",
+        "IsAdmin": false
+      },
+      {
+        "Id": 5,
+        "Name": "Personal",
+        "IsAdmin": false
+      }
+    ],
+    "DepartmentId": 6,
+    "isArchived": false,
+    "isSuspended": false,
+    "changedInitialPassword": false,
+    "Notes": null
+  },
+  {
+    "Id": 10,
+    "UserName": "toffkar",
+    "FirstName": "Karl",
+    "LastName": "Toffel",
+    "DateOfBirth": "1997-03-03T00:00:00",
+    "ContractStart": "2020-01-01T00:00:00",
+    "ContractType": 3,
+    "EmailAddress": "kartoffel97@gmail.com",
+    "PasswordHash": "$2a$11$o7B6QiMrAuNKSQpYiJKghOsOf5hLUZ8Hqhk4eYvh8f/zqrB4j1uC.",
+    "Roles": [
+      {
+        "Id": 2,
+        "Name": "IT",
+        "IsAdmin": false
+      }
+    ],
+    "DepartmentId": 3,
+    "isArchived": false,
+    "isSuspended": false,
+    "changedInitialPassword": false,
+    "Notes": null
+  },
+  {
+    "Id": 11,
+    "UserName": "ruhewil",
+    "FirstName": "Wilma",
+    "LastName": "Ruhe",
+    "DateOfBirth": "1996-06-06T00:00:00",
+    "ContractStart": "2020-01-01T00:00:00",
+    "ContractType": 0,
+    "EmailAddress": "ruhe123@gmx.de",
+    "PasswordHash": "$2a$11$orggVFOtGzrJvldpJuM7..MQGGL/ChWQ75mJvveQd8nVDo0BW0ed2",
+    "Roles": [],
+    "DepartmentId": 7,
+    "isArchived": false,
+    "isSuspended": false,
+    "changedInitialPassword": false,
+    "Notes": null
+  }
+]

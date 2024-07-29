@@ -1,0 +1,94 @@
+@model SoPro24Team03.ViewModels.ProcTemplViewModel;
+
+@{
+    ViewData["Title"] = "Prozesse";
+}
+
+<style>
+    body {
+        background-color: var(--replay-white);
+    }
+
+    .item {
+        background-color: var(--replay-grey1);
+        color: var(--replay-licorice);
+    }
+
+    .active {
+        background-color: var(--replay-grey3);
+        color: var(--replay-white);
+    }
+
+    .active i {
+        color: var(--replay-white);
+    }
+
+    .input-group-text {
+        background-color: var(--replay-grey1);
+    }
+</style>
+
+<div class="container-fluid text-center" style="width: 80%; height: 100%;">
+    <div class="d-flex justify-content-between pb-3">
+        <div class="d-flex gap-3" style="width: 24rem;">
+        </div>
+        <a class="btn btn-primary" asp-area="" asp-controller="ProcedureTemplate" asp-action="Create">Hinzufügen</a>
+    </div>
+    <div class="d-flex gap-4" style="height: 80%;">
+        @if (Model.ProcedureTemplates.Count() == 0)
+        {
+            <span>Keine Prozesse vorhanden!</span>
+        }
+        else
+        {
+            <section class="item-list d-flex flex-column gap-3" style="width: 24rem;">
+                @foreach (var procTempl in Model.ProcedureTemplates)
+                {
+                    <span class="item p-3 justify-content-center align-items-center rounded d-flex gap-3" style="width: 100%;"
+                        data-item-id="@procTempl.Id">
+                        <div style="font-weight: 600;">
+                            @procTempl.Name
+                        </div>
+                    </span>
+                }
+            </section>
+            <section id="details-container" class="flex-fill" style="height: 100%;">
+
+            </section>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            var itemId = $('.item-list span:first').data('item-id');
+
+            if (!itemId) return;
+
+            loadContent(itemId)
+            $('.item-list span:first').addClass('active')
+
+            $('.item').click(function (e) {
+                e.preventDefault();
+
+                var itemId = $(this).data('item-id');
+
+                loadContent(itemId)
+
+                $('.item-list .item').removeClass('active')
+                $(this).addClass('active')
+            })
+        })
+
+        function loadContent(itemId) {
+            $.ajax({
+                url: '@Url.Action("Details", "ProcedureTemplate")',
+                data: { id: itemId },
+                success: function (data) {
+                    $('#details-container').load('/ProcedureTemplate/Details/' + itemId);
+                }
+            })
+        }
+    </script>
+}

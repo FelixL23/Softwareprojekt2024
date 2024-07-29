@@ -1,0 +1,25 @@
+@model SoPro24Team03.ViewModels.ArchivedViewModel
+@{
+    ViewData["Title"] = "Archiv";
+}
+
+<!-- made by Felix -->
+<p>Wählen Sie eine Kategorie, um archivierte Elemente anzuzeigen:</p>
+
+<ul>
+    @if (Model.isAdmin)
+    {
+        <li><a asp-controller="Archiv" asp-action="ArchivedUser">Archivierte Benutzer</a></li>
+    }
+    <li><a asp-controller="Archiv" asp-action="ArchivedProcedure">Archivierten Vorgänge</a></li>
+
+</ul>
+
+<style>
+    body {
+        background-color: #ffffff;
+            color: #141210;
+    }
+</style>
+
+

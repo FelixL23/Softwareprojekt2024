@@ -1,0 +1,59 @@
+@model SoPro24Team03.ViewModels.CreateProcedureViewModel
+@{
+    ViewData["Title"] = "Vorgang anlegen";
+}
+
+<div class="row m-2">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group pb-3">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" id="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group pb-3">
+                <label asp-for="ReferId" class="control-label"></label><br>
+                <select asp-for="ReferId" id="ReferId" asp-items="Model.AllUsers"></select>
+                <span asp-validation-for="ReferId" class="text-danger"></span>
+            </div>
+            <div class="form-group pb-3">
+                <label asp-for="RespId" class="control-label"></label><br>
+                <select asp-for="RespId" id="RespId" asp-items="Model.AllUsers"></select>
+                <span asp-validation-for="RespId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group pb-3">
+                <label asp-for="TargetDate" class="control-label"></label>
+                <input asp-for="TargetDate" id="TargetDate" class="form-control" />
+                <span asp-validation-for="TargetDate" class="text-danger"></span>
+            </div>
+            <div class="form-group pb-3">
+                <label asp-for="ContractType" class="control-label"></label><br>
+                <select asp-for="ContractType" id="ContractType" asp-items="Html.GetEnumSelectList<ContractType>()">
+                    <option value="">-</option>
+                </select>
+                <span asp-validation-for="ContractType" class="text-danger"></span>
+            </div>
+            <div class="form-group pb-4">
+                <label asp-for="FutureDepartmentId" class="control-label"></label><br>
+                <select asp-for="FutureDepartmentId" id="FutureDepartmentId" asp-items="Model.AllDepartments">
+                    <option value="">-</option>
+                </select>
+                <span asp-validation-for="FutureDepartmentId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group pb-4">
+                <input type="submit" value="Speichern" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="container m-2">
+    <a asp-action="Index">Zurück zur Übersicht</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

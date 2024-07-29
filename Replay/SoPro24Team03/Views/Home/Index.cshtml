@@ -1,0 +1,147 @@
+
+@model SoPro24Team03.ViewModels.DashboardViewModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+<!-- Made Daniel H and Felix -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #141210;
+        }
+        .display-container {
+            overflow: scroll; 
+            height:700px;
+        }
+
+        .sticky-header {
+            position: -webkit-sticky; /* For Safari */
+            position: sticky;
+            top: 0;
+            background-color: #141210;
+            color: #ffffff;
+            padding: 10px 0;
+            z-index: 10;
+        }
+        
+        .no-item-card {
+            background-color: #DBDBDB;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .task-card {
+            background-color: #DBDBDB;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .task-status {
+            font-weight: bold;
+        }
+
+        .status-in-progress {
+            color: #ffffff;
+            background-color: #626262;
+            border-radius: 10px;
+            padding: 5px 10px;
+        }
+
+        .status-overdue {
+            color: #ffffff;
+            background-color: #dc3545;
+            border-radius: 10px;
+            padding: 5px 10px;
+        }
+
+        .see-more {
+            background-color: #DBDBDB;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .tasks-done {
+            color: #ffffff;
+            background-color : #626262;
+            border-radius: 10px;
+            padding: 5px 10px;
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-6 display-container">
+                <h2 class="sticky-header rounded-3 px-2 mb-1">MEINE VORGÄNGE (@Model.Procedures.Count)</h2>
+                @if (Model.Procedures.Count > 0)
+                {
+                    @foreach (var proc in Model.Procedures)
+                    {
+                          <!-- Display procedure details and highlight if overdue -->
+                        <div class="task-card" style="@(proc.IsOverdue() ? "color:red; font-weight:bold;" : "")" >
+                            <h5>@proc.Name</h5>
+                            <p>Verantwortlicher: @($"{proc.Resp.FirstName} {proc.Resp.LastName}")</p>
+                            <p>Bezugsperson: @($"{proc.Refer.FirstName} {proc.Refer.LastName}")</p>
+                            <p>Zieldatum: @proc.TargetDate</p>
+                            <p>Erledigte Aufgaben: <span class="tasks-done">@proc.NumTasksDone / @proc.NumTasksTotal</span></p>
+                        </div>
+                        
+                    }
+                    <div class="see-more">
+                        <a asp-area="" asp-controller="Procedure" asp-action="Index">See more</a>
+                    </div>
+                }
+                else
+                {
+                    <div class="no-item-card">
+                        <p>keine Aufgaben</p>
+                    </div>
+                }
+
+            </div>
+            <div class="col-md-6 display-container">
+                <h2 class="sticky-header rounded-3 px-2 mb-1">MEINE AUFGABEN (@Model.TaskInsts.Count)</h2>
+
+                @if (Model.TaskInsts.Count > 0)
+                {
+                    @foreach (var task in Model.TaskInsts)
+                    {
+                        <!-- Display task details and highlight if overdue -->
+                        <div class="task-card" style="@(task.isOverdue() ? "color:red; font-weight:bold;" : "")">
+                            <h5>@task.Name</h5>
+                            <p>Zuständiger: @task.Resp.DisplayName()</p>
+                            <p>Zieldatum: @task.TargetDate</p>
+                            <p>Status: <span class="status-in-progress">@task.Status.GetDisplayName()</span></p>
+                        </div>
+                        
+                    }
+                    <div class="see-more">
+                            <a asp-controller="TaskInst" asp-action="Index" >See more</a>
+                        </div>
+                }
+                else
+                {
+                    <div class="no-item-card">
+                        <p>keine Aufgaben</p>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

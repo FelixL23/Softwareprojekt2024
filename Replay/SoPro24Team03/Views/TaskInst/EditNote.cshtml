@@ -1,0 +1,42 @@
+@model SoPro24Team03.ViewModels.NoteViewModel
+@{
+    ViewData["Title"] = "Aufgaben / Notiz bearbeiten";
+}
+
+<div class="row m-2">
+    <div class="col-md-4">
+        <form asp-action="EditNote">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group pb-3">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group pb-3">
+                <label asp-for="Text" class="control-label"></label>
+                <textarea asp-for="Text" class="form-textarea" style="min-width:100%; height:110px;"></textarea>
+                <span asp-validation-for="Text" class="text-danger"></span>
+            </div>
+
+            <div class="form-group pb-4">
+                <div class="form-check">
+                    <input asp-for="VisibleToOthers" class="form-check-input" type="checkbox">
+                    <label asp-for="VisibleToOthers" class="form-check-label"></label>
+                    <span asp-validation-for="VisibleToOthers" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group pb-4">
+                <input type="submit" value="Speichern" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="container m-2">
+    <a asp-action="Index">Zurück zur Übersicht</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

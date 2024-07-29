@@ -1,0 +1,102 @@
+@model SoPro24Team03.ViewModels.CreateTaskInstViewModel
+@{
+    ViewData["Title"] = "Aufgabe hinzufügen";
+}
+
+<div class="row m-2">
+    <div class="col-md-4 border rounded-3">
+        <form asp-action="Create" method="get">
+            <div class="form-group mt-3 mb-3">
+                <label class="form-label" for="TemplateSelect">Vorlage: </label>
+                <select id="TemplateSelect" class="form-select" asp-for="TemplateId" asp-items="Model.AllTaskTemplates">
+                    <option value="" selected>-</option>
+                </select>
+            </div>
+            
+            <div class="form-group mt-3 mb-3">
+                <input class="btn btn-primary" type="submit" value="Laden" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row m-2 pt-3">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="TemplateId" />
+            <div class="form-group pb-3">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group pb-3">
+                <label asp-for="TargetDate" class="control-label"></label>
+                <input asp-for="TargetDate" class="form-control" />
+                <span asp-validation-for="TargetDate" class="text-danger"></span>
+            </div>
+            <div class="form-group pb-3">
+                <label asp-for="Status" class="control-label"></label>
+                <select asp-for="Status" asp-items="Html.GetEnumSelectList<CompletionStatus>()"></select>
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+
+            <div class="form-group pb-4">
+                <label class="control-label">Zuständiger</label>
+                <select id="SelectRespType" asp-for="TaskRespType">
+                    <option value="@TaskRespType.role">@TaskRespType.role.GetDisplayName()</option>
+                    <option value="@TaskRespType.user">@TaskRespType.user.GetDisplayName()</option>
+                </select>
+                <span asp-validation-for="TaskRespType" class="text-danger"></span>
+                <br>
+
+                <div id="SelectRespRole" class="pt-1" style="display: none;">
+                    <select asp-for="RespRoleId" asp-items="Model.AllRoles"></select>
+                    <span asp-validation-for="RespRoleId" class="text-danger"></span>
+                </div>
+
+                <div id="SelectRespUser" class="pt-1" style="display: none;">
+                    <select asp-for="RespUserId" asp-items="Model.AllUsers"></select>
+                    <span asp-validation-for="RespUserId" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group pb-4">
+                <input type="submit" value="Speichern" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="container m-2">
+    <a asp-action="Index">Zurück zur Übersicht</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        $(document).ready(function() {
+            var preSelectedType = $('#SelectRespType').val()
+            if (preSelectedType === "role") {
+                $('#SelectRespRole').show();
+            }
+            else if (preSelectedType === "user") {
+                $('#SelectRespUser').show();
+            }
+
+            $('#SelectRespType').change(function() {
+                var selectedType = $(this).val();
+
+                if (selectedType === "role") {
+                    $('#SelectRespRole').show();
+                    $('#SelectRespUser').hide();
+                }
+                else if (selectedType === "user") {
+                    $('#SelectRespRole').hide();
+                    $('#SelectRespUser').show();
+                }
+            })
+        })
+    </script>
+}

@@ -1,0 +1,95 @@
+[
+  {
+    "Id": 1,
+    "Name": "On-Boarding",
+    "TargetDate": "2024-06-25T08:32:10",
+    "IsArchived": false,
+    "NumTasksDone": 0,
+    "NumTasksTotal": 1,
+    "CreatedContractType": 1,
+    "TaskInsts": [
+      {
+        "Id": 1,
+        "Name": "SSH-Key erstellen",
+        "TargetDate": "2024-06-30T22:56:30",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 1,
+        "TemplateId": 1,
+        "RespId": 2,
+        "Resp": {
+          "Id": 2,
+          "RoleId": 2,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      }
+    ],
+    "OrderedTaskInstIds": "1",
+    "TemplateId": 1,
+    "FutureDepartmentId": 1,
+    "RespId": 3,
+    "ReferId": 4
+  },
+  {
+    "Id": 2,
+    "Name": "Prokrastinieren1",
+    "TargetDate": "2024-07-30T22:03:47.427",
+    "IsArchived": false,
+    "NumTasksDone": 2,
+    "NumTasksTotal": 2,
+    "CreatedContractType": null,
+    "TaskInsts": [
+      {
+        "Id": 2,
+        "Name": "D\u00E4umchen Drehen",
+        "TargetDate": "2024-07-30T22:03:47.427",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [
+          {
+            "Id": 1,
+            "CreationDate": "2024-07-26T22:04:53.3252772",
+            "VisibleToOthers": true,
+            "Title": "Beachten",
+            "Text": "Sehr wichtige Aufgabe.",
+            "AuthorId": 3,
+            "TaskInstId": 2
+          }
+        ],
+        "ProcedureId": 2,
+        "TemplateId": 2,
+        "RespId": 4,
+        "Resp": {
+          "Id": 4,
+          "RoleId": null,
+          "UserId": 3,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 3,
+        "Name": "Nichts tun",
+        "TargetDate": "2024-07-26T22:05:09.76",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 2,
+        "TemplateId": null,
+        "RespId": 5,
+        "Resp": {
+          "Id": 5,
+          "RoleId": 1,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      }
+    ],
+    "OrderedTaskInstIds": "",
+    "TemplateId": 2,
+    "FutureDepartmentId": null,
+    "RespId": 3,
+    "ReferId": 3
+  }
+]

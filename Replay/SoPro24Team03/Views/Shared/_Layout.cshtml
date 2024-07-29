@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Replay</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="~/css/replay.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/@(nameof(SoPro24Team03)).styles.css" asp-append-version="true" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Open+Sans:wght@300..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column" style="min-height: 100vh;">
+    <header class="nav-header d-flex flex-row flex-shrink-0 text-white">
+        <div class="justify-content-start p-3" style="width: 280px;">
+            <a class="d-flex gap-4 justify-content-start align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <img src="~/makandra_icon_dark_color_rgb_compact-b5509a28.svg" width="48" height="48" alt="logo"></img>
+                <h1 class="fs-1 nav-brand mb-0 text-end">Replay</h1>
+            </a>
+        </div>
+        <div class="d-flex justify-content-between align-items-center p-3 flex-fill">
+            <h3 class="fs-3">@ViewData["Title"]</h3>
+            <div class="dropdown">
+                <button 
+                    class="btn bg-transparent" 
+                    type="button" 
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" 
+                    aria-expanded="false"
+                >
+                    <i class="bi bi-person-circle d-flex" style="font-size: 3rem; color: white;"></i>
+                </button>
+                <ul class=" dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><form  asp-controller="Authentication" asp-action="Logout" method="post">
+                            <button type="submit"class="dropdown-item" >Logout</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="d-flex flex-fill" style="min-height: 100%;">
+        <div class="d-flex flex-row flex-fill">
+            <nav class="d-flex flex-column flex-shrink-0 py-3 ps-3 text-white" style="width: 280px; min-height: 100%;">
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <!-- Übersicht -->
+                    <li class="nav-item">
+                        <a b-1719aa0vf5 class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+
+                    <!-- Verwaltung -->
+                    <li class="nav-item">
+                        <a b-1719aa0vf5 class="nav-link" asp-area="" asp-controller="TaskInst"
+                            asp-action="Index">Aufgaben</a>
+                    </li>
+                    <li class="nav-item">
+                        <a b-1719aa0vf5 class="nav-link" asp-area="" asp-controller="Procedure"
+                            asp-action="Index">Vorgänge</a>
+                    </li>
+
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li class="nav-item">
+                            <a b-1719aa0vf5 class="nav-link" asp-area="" asp-controller="TaskTemplate"
+                                asp-action="Index">Aufgabenvorlagen</a>
+                        </li>
+                    }
+                    <li class="nav-item">
+                        <a b-1719aa0vf5 class="nav-link" asp-area="" asp-controller="ProcedureTemplate"
+                            asp-action="Index">Prozesse</a>
+                    </li>
+
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li class="nav-item">
+                            <a b-1719aa0vf5 class="nav-link" asp-area="" asp-controller="Usermanagement"
+                                asp-action="UserOverview">Benutzer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a b-1719aa0vf5 class="nav-link" asp-area="" asp-controller="Role" asp-action="Index">Rollen</a>
+                        </li>
+                    }
+                    <li class="nav-item">
+                        <a b-1719aa0vf5 class="nav-link" asp-area="" asp-controller="Archiv" asp-action="Index">Archiv</a>
+                    </li>
+                </ul>
+            </nav>
+            <main role="main" class="py-3" style="width: 100%;">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

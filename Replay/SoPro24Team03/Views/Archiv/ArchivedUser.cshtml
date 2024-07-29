@@ -1,0 +1,47 @@
+@model IEnumerable<SoPro24Team03.ViewModels.ArchivedUserViewModel>
+@{
+    ViewData["Title"] = "Archivierte Benutzer";
+}
+<!-- made by Felix -->
+<h2>Übersicht über archivierte Benutzer</h2>
+
+<style>
+    .archived-table {
+        border: 2px solid black;
+        border-collapse: collapse;
+    }
+
+    .archived-table th,
+    .archived-table td {
+        border: 2px solid black;
+    }
+</style>
+
+<table class="table archived-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.Id</td>
+                    <td>@user.Name</td>
+                    <td>@user.Email</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="4" class="text-center">Keine archivierten Benutzer gefunden.</td>
+            </tr>
+        }
+    </tbody>
+</table>

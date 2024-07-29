@@ -1,0 +1,208 @@
+@model SoPro24Team03.ViewModels.EditProcTemplViewModel;
+@{
+    ViewData["Title"] = "Prozess bearbeiten";
+}
+
+<style>
+    .sortable {
+        list-style-type: none;
+    }
+
+    .sortable-item {
+        -webkit-user-select: none;
+        user-select: none;
+    }
+</style>
+
+<section class="container d-flex flex-column" style="min-height: 100%;">
+    <div class="d-flex flex-column flex-fill">
+        <div class="bg-primary rounded p-3 flex-fill">
+            <form asp-controller="ProcedureTemplate" asp-action="Edit" method="post">
+                <div class="row row-cols-2">
+                    <div>
+                        <div class="mb-3 row">
+                            <label asp-for="Name" class="col-1 col-form-label">Name</label>
+                            <div class="col-11">
+                                <input asp-for="Name" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column gap-3" style="height: 100%;">
+                            @if (Model.Roles != null)
+                            {
+                                <label asp-for="SelectedRoles"></label>
+                                <select asp-for="SelectedRoles"
+                                    class="role-select" asp-items="Model.Roles">
+                                </select>
+                            }
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column gap-3 align-items-center">
+                        <h5 class="fs-4">Aufgaben</h5>
+                        <input type="hidden" class="tasks" asp-for="SelectedTaskTemplateIds" />
+
+                        <div id="taskContainer" class="sortable">
+
+                        </div>
+
+                        <div class="row" style="width: 20rem;">
+                            <button class="btn" type="button" data-bs-toggle="modal"
+                                data-bs-target="#addTaskTemplateModal">
+                                <i class="bi bi-plus-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a asp-action="Index" class="btn">Abbrechen</a>
+                    <button id="submit" type="submit" class="btn btn-primary">Speichern</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<div id="addTaskTemplateModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Aufgabenvorlagen hinzufügen</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="accordion" id="taskTemplate-accordion">
+                    @foreach (var taskTemplate in Model.TaskTemplates)
+                    {
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading[@taskTemplate.Id]">
+                                <button class="d-flex gap-4 accordion-button">
+                                    <input type="checkbox" class="taskTemplate-checkbox" data-id="@taskTemplate.Id"
+                                        data-name="@taskTemplate.Name" />
+                                    <span class="flex-fill" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse-@taskTemplate.Id" aria-expanded="true"
+                                        aria-controls="collapse-@taskTemplate.Id">
+                                        @taskTemplate.Name
+                                    </span>
+                                </button>
+                            </h2>
+                            <div id="collapse-@taskTemplate.Id" class="accordion-collapse collapse"
+                                aria-labelledby="heading[@taskTemplate.Id]" data-bs-parent="#taskTemplate-accordion">
+                                <div class="accordion-body d-flex flex-column gap-2">
+                                    <span>
+                                        Aufgabenverantwortlich: @taskTemplate.TaskResponsible.TaskRespType.GetDisplayName()
+                                    </span>
+                                    <span>
+                                        Fälligkeit: @taskTemplate.DueType.GetDisplayName()
+                                    </span>
+                                    <span>
+                                        Vertragsarten:
+                                        <ul>
+                                            @foreach(var ct in @taskTemplate.ContractTypes)
+                                            {
+                                                <li>@ct.GetDisplayName()</li>
+                                            }
+                                        </ul> 
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Abbrechen</button>
+                <button type="button" id="saveTasksBtn" class="btn btn-primary"
+                    data-bs-dismiss="modal">Speichern</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.role-select').select2();
+            
+            var selectedTaskIds = $('.tasks').val().split(',')
+
+            selectedTaskIds.forEach(taskId => {
+                toggleCheckbox(taskId, true)
+            });
+            
+            $('.taskTemplate-checkbox:checked').each(function () {
+                var taskTemplateId = $(this).data('id');
+                var taskTemplateName = $(this).data('name');
+                
+                createHtmlAndPushToContainer(taskTemplateId, taskTemplateName)
+            })
+
+            sortContainer(selectedTaskIds);
+
+            $('#saveTasksBtn').click(function () {
+                selectedTaskIds = []
+
+                $('#taskContainer').empty()
+
+                $('.taskTemplate-checkbox:checked').each(function () {
+                    var taskTemplateId = $(this).data('id');
+                    var taskTemplateName = $(this).data('name');
+
+                    if (taskTemplateId && !selectedTaskIds.includes(taskTemplateId)) {
+                        selectedTaskIds.push(`${taskTemplateId}`);
+
+                        createHtmlAndPushToContainer(taskTemplateId, taskTemplateName)
+
+                        $('.tasks').val(selectedTaskIds.join(","))
+                    }
+                })
+
+            });
+
+            $('#taskContainer').on('click', '.removeTask', function () {
+                var itemToRemove = $(this).closest('.task').data('id');
+                toggleCheckbox(itemToRemove, false);
+
+                selectedTaskIds = selectedTaskIds.filter(item => item != itemToRemove)
+
+                $('.tasks').val(selectedTaskIds.join(','))
+                $(this).closest('.task').remove();
+            });
+
+            $('.sortable').sortable({
+                stop: function (event, ui) {
+                    var sortedIDs = $(".sortable").sortable("toArray", { attribute: "data-id" });
+                    $('.tasks').val(sortedIDs.join(","))
+                }
+            });
+
+            $('#taskTemplate-accordion').on('click', '.prevent-toggle', function (event) {
+                event.stopPropagation();
+            });
+        });
+
+        function createHtmlAndPushToContainer(id, name) {
+            const taskHtml = `<div class="task row" style="width: 20rem;" data-id="${id}">
+                                                <span class="col-8">${name}</span>
+                                                <button type="button" class="removeTask col btn">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </div>`;
+            $('#taskContainer').append(taskHtml)
+        }
+        
+        function toggleCheckbox(id, checked) {
+            $('.taskTemplate-checkbox[data-id="' + id + '"]').prop('checked', checked);
+        }
+
+        function sortContainer(selectedTaskIds) {
+            var $container = $('#taskContainer');
+
+            // Elemente im Container basierend auf der Reihenfolge sortieren
+            var sortedElements = selectedTaskIds.map(function(id) {
+                return $container.find('.task[data-id="'+ id + '"]');
+            });
+
+            // Container leeren und die sortierten Elemente hinzufügen
+            $container.empty().append(sortedElements);
+        }
+    </script>
+}

@@ -1,0 +1,50 @@
+@model List<SoPro24Team03.ViewModels.ArchivedProcedureViewModel>
+<!-- made by Felix -->
+<h1>Archivierte Vorgänge</h1>
+
+<style>
+    .archived-table {
+        border: 2px solid black;
+        border-collapse: collapse;
+    }
+
+    .archived-table th,
+    .archived-table td {
+        border: 2px solid black;
+    }
+</style>
+
+
+<table class="table archived-table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Vorgangsverantwortlicher</th>
+            <th>Zieldatum</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var procedure in Model)
+            {
+                <tr>
+                    <td>@procedure.Id</td>
+                    <td>@procedure.Name</td>
+                    <td>@($"{procedure.Resp.FirstName} {procedure.Resp.LastName}")</td> <!-- Anzeige des Namens des Verantwortlichen -->
+                    <td>@procedure.TargetDate.ToString("dd.MM.yyyy")</td>
+                    <td>
+                        <a class="btn btn-primary" href="@Url.Action("ArchivedTaskList", "Archiv", new { id = procedure.Id })">Aufgaben anzeigen</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="4" class="text-center">Keine archivierten Vorgänge gefunden.</td>
+            </tr>
+        }
+    </tbody>
+</table>

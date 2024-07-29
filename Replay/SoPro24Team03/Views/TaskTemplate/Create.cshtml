@@ -1,0 +1,107 @@
+@model SoPro24Team03.ViewModels.CreateTaskTemplateViewModel;
+@{
+    ViewData["Title"] = "Aufgabenvorlage erstellen";
+}
+
+<div class="container">
+    <h1>@ViewData["Title"]</h1>
+
+    <form asp-action="Create" class="row g-3">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="col-12">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="col-6">
+            <label asp-for="TaskResponsibleType" class="form-label"></label>
+            <select id="taskRespType" asp-for="TaskResponsibleType" class="form-select">
+                @foreach (var type in Enum.GetValues<TaskRespType>())
+                {
+                    <option value="@type">@type.GetDisplayName()</option>
+                }
+            </select>
+            <span asp-validation-for="TaskResponsibleType" class="text-danger"></span>
+        </div>
+        <div id="availableRoles" class="col-6">
+            <label asp-for="TaskResponsibleRoleId" class="form-label"></label>
+            <select class="form-select" asp-for="TaskResponsibleRoleId" asp-items="Model.Roles" disabled></select>
+            <span asp-validation-for="TaskResponsibleRoleId" class="text-danger"></span>
+        </div>
+        <div class="col-6">
+            <label asp-for="DueType" class="form-label"></label>
+            <select id="DueType" asp-for="DueType" class="form-select" aria-label="Default select example">
+                @foreach (var dueType in Enum.GetValues<DueType>())
+                {
+                    <option value="@dueType">@dueType.GetDisplayName()</option>
+                }
+            </select>
+            <span asp-validation-for="DueType" class="text-danger"></span>
+        </div>
+        <div id="customDays" class="col-6">
+            <label class="form-label">Anzahl Tage:</label>
+            <input type="number" asp-for="CustomDays" class="form-control" disabled />
+            <span asp-validation-for="CustomDays" class="text-danger"></span>
+        </div>
+        <div class="col-12">
+            <label asp-for="ContractTypes" class="form-label"></label>
+            <select asp-for="ContractTypes" multiple="multiple" class="contractType-select form-select"
+                aria-label="Default select example">
+                @foreach (var contractType in Enum.GetValues<ContractType>())
+                {
+                    <option value="@contractType">@contractType.GetDisplayName()</option>
+                }
+            </select>
+            <span asp-validation-for="DueType" class="text-danger"></span>
+        </div>
+        <div class="col-12">
+            <label asp-for="SelectedDepartmentIds" class="form-label"></label>
+            <select asp-for="SelectedDepartmentIds" multiple="multiple" class="department-select form-select" aria-label="Abteilungen"
+                asp-items="Model.Departments">
+            </select>
+            <span asp-validation-for="DueType" class="text-danger"></span>
+        </div>
+        <div class="col-12">
+            <label asp-for="Instruction" class="form-label"></label>
+            <textarea asp-for="Instruction" class="form-control" rows="5"></textarea>
+            <span asp-validation-for="Instruction" class="text-danger"></span>
+        </div>
+        <div class="col-12">
+            <a asp-action="Index" class="btn">Abbrechen</a>
+            <input type="submit" value="Speichern" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+<script>
+    $(document).ready(function () {
+        $('.contractType-select').select2()
+        $('.department-select').select2()
+
+        $('#taskRespType').change(function () {
+            var selectedType = $(this).val();
+
+            if (selectedType === "role") {
+                $('#availableRoles select').prop("disabled", false)
+            } else {
+                $('#availableRoles select').prop("disabled", true)
+            }
+        })
+
+        $('#DueType').change(function () {
+            var selectedType = $(this).val()
+
+            if (selectedType === "custom") {
+                $('#customDays input').prop("disabled", false)
+            } else {
+                $('#customDays input').prop("disabled", true)
+            }
+        })
+    })
+</script>
+}

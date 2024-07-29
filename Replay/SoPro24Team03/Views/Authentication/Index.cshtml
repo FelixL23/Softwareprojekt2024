@@ -1,0 +1,126 @@
+@model SoPro24Team03.ViewModels.AuthenticationViewModel
+@{
+    Layout = null;
+    ViewData["Title"] = "Login";
+}
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Replay</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="~/css/replay.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/@(nameof(SoPro24Team03)).styles.css" asp-append-version="true" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Open+Sans:wght@300..800&display=swap"
+        rel="stylesheet">
+    <link href="~/css/auth.css" rel="stylesheet" />
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: var(--replay-licorice);
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 300px;
+            padding: 30px;
+            margin: 20px;
+            border-radius: 10px;
+            background-image: linear-gradient(to right, #FF0844, #FFB199);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-group + .form-group {
+            margin-top: 0.5rem;
+        }
+
+        .form-group label {
+            width: 100%;
+            text-align: left;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            background-color: transparent;
+            border-color: var(--replay-licorice);
+            width: 12rem;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .login-button {
+            background-color: var(--replay-licorice);
+            border-color: var(--replay-licorice);
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-button:hover {
+            cursor: pointer;
+        }
+        
+        #userName {
+            margin-bottom: 10px;
+        }
+
+        .text-danger-login {
+            color: #4408FF
+        }
+    </style>
+</head>
+
+<body>
+    <img src="~/logo/makandra_word_dark_mono_rgb_whitespace-96f607b1.png" alt="makandra logo" style="width:800px; margin-right: 10px;">
+    <div class="login-container">
+        <h2 class="text-center">LOGIN</h2>
+        <form asp-action="Login" method="post" class="form-container">
+            <div asp-validation-summary="All" class="text-danger-login"></div>
+
+            <div class="form-group">
+                <input asp-for="userName" id="userName" class="form-control" placeholder="Benutzername" type="Text" />
+            </div>
+
+            <div class="form-group">
+                <input asp-for="inputPassword" id="password" class="form-control" placeholder="Passwort" type="password" />
+            </div>
+            
+            <button type="submit" id="loginButton" class="btn login-button">Einloggen</button>
+        </form>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+</body>
+
+</html>

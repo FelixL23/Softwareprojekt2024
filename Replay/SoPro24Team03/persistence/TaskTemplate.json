@@ -1,0 +1,975 @@
+[
+  {
+    "Id": 1,
+    "Name": "Create GSuite account",
+    "IsArchived": false,
+    "Instruction": "* [] Have GSuite create a random password.\r\n\r\n* [ ] Copy the password to the clipboard. **In your personal space** on GDrive, create a new document with the \u0022Initiale Zugangsdaten\u0022 template and add the GSuite credentials to that document. Print it out, put the paper version into an envelope you can hand over to the new employee. Make sure to delete the document in your GDrive.\r\n\r\n* [ ] Make the user a member in the organizational unit that fits their job best.\r\n \r\n* [ ] Click \u0060save\u0060.\r\n\r\n* [ ] Make the user a member in the groups \u0060alle\u0060 (both) and \u0060entwickler\u0060 if they\u0027re a tech employee.\r\n\r\n * [ ] Let Anne Kolbe from HR know that the mail account is now ready. She will then create an account with Time Machine for the new employee.",
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 1,
+      "RoleId": 2,
+      "UserId": null,
+      "TaskRespType": 2
+    },
+    "TaskResponsibleId": 1,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 2,
+    "Name": "D\u00E4umchen Drehen",
+    "IsArchived": false,
+    "Instruction": "## Wichtig\r\nwichtig\r\n**sehr wichtig**",
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 3,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 3,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 3,
+    "Name": "TestTaskTempl1",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 6,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 6,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 4,
+    "Name": "TestTaskTempl2",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 3,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 7,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 1
+    },
+    "TaskResponsibleId": 7,
+    "Departments": [],
+    "ContractTypes": [
+      0
+    ]
+  },
+  {
+    "Id": 5,
+    "Name": "TestTaskTempl3",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 1,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 8,
+      "RoleId": 2,
+      "UserId": null,
+      "TaskRespType": 2
+    },
+    "TaskResponsibleId": 8,
+    "Departments": [
+      {
+        "Id": 5,
+        "Name": "Backoffice"
+      }
+    ],
+    "ContractTypes": []
+  },
+  {
+    "Id": 6,
+    "Name": "Grundlagen der B\u00FCro-IT-Sicherheit",
+    "IsArchived": false,
+    "Instruction": "-Lies dir durch und merk dir, wie wir mit Passw\u00F6rtern, Browsererweiterungen und\r\nSicherheitsgrundlagen umgehen.\r\n\r\n-Frag unseren Informationssicherheitsbeauftragten (ISB), wie wir mit Passw\u00F6rtern umgehen. Es\r\nwird von dir erwartet, dass du eindeutige, nicht speicherbare Passw\u00F6rter f\u00FCr jedes deiner Konten in\r\nKeepass erstellst und dir niemals ein Passwort merkst, au\u00DFer f\u00FCr deine\r\nFestplattenverschl\u00FCsselung, deinen Linux-Benutzer und dein Keepass.\r\n\r\n-Bitte verwende keine privaten Ger\u00E4te f\u00FCr die Arbeit, au\u00DFer bei den im Lauf des Onboardings\r\nausdr\u00FCcklich genannten Ausnahmen.",
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 9,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 1
+    },
+    "TaskResponsibleId": 9,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 7,
+    "Name": "Synchronisation von Passw\u00F6rtern",
+    "IsArchived": false,
+    "Instruction": "Stelle sicher, dass du deine Passw\u00F6rter nicht mit der Google Chrome Cloud synchronisierst.",
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 10,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 1
+    },
+    "TaskResponsibleId": 10,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 8,
+    "Name": "Erstellen eines Hashes",
+    "IsArchived": false,
+    "Instruction": "Erstelle einen neuen Basic-Auth-Passwort-Hash und schicke ihn per E-Mail an\r\nops@makandra.de.",
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 11,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 1
+    },
+    "TaskResponsibleId": 11,
+    "Departments": [],
+    "ContractTypes": [
+      0
+    ]
+  },
+  {
+    "Id": 9,
+    "Name": "Bitte um Aufnehmung in die Basisauthentifizierung",
+    "IsArchived": false,
+    "Instruction": "Sende diesen Passwort-Hash an ops@makandra.de und bitte darum, in die allgemeine\r\nBasisauthentifizierung von makandra aufgenommen zu werden.",
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 12,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 1
+    },
+    "TaskResponsibleId": 12,
+    "Departments": [],
+    "ContractTypes": [
+      0
+    ]
+  },
+  {
+    "Id": 10,
+    "Name": "Email checken mit tempor\u00E4ren Passwort",
+    "IsArchived": false,
+    "Instruction": "Ops hat einen Gitlab-Benutzer f\u00FCr dich erstellt. Du solltest eine E-Mail mit einem tempor\u00E4ren\r\nPasswort erhalten haben.",
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 13,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 1
+    },
+    "TaskResponsibleId": 13,
+    "Departments": [
+      {
+        "Id": 2,
+        "Name": "Operations"
+      }
+    ],
+    "ContractTypes": []
+  },
+  {
+    "Id": 11,
+    "Name": "SSH-Key hinzuf\u00FCgen",
+    "IsArchived": false,
+    "Instruction": "F\u00FCge deinen SSH-Schl\u00FCssel in dein GitLab-Profil ein.",
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 14,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 1
+    },
+    "TaskResponsibleId": 14,
+    "Departments": [
+      {
+        "Id": 2,
+        "Name": "Operations"
+      }
+    ],
+    "ContractTypes": []
+  },
+  {
+    "Id": 12,
+    "Name": "2-Faktorauthentifizierung \u00FCber Smartphone",
+    "IsArchived": false,
+    "Instruction": "Du darfst dein privates Smartphone f\u00FCr die erforderliche Zwei-Faktoren-Authentifizierung\r\nverwenden.",
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 15,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 1
+    },
+    "TaskResponsibleId": 15,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 13,
+    "Name": "Git-Config einrichten",
+    "IsArchived": false,
+    "Instruction": "Richte eine vern\u00FCnftige git-config ein.",
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 16,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 1
+    },
+    "TaskResponsibleId": 16,
+    "Departments": [
+      {
+        "Id": 2,
+        "Name": "Operations"
+      }
+    ],
+    "ContractTypes": []
+  },
+  {
+    "Id": 14,
+    "Name": "Informationen zu Rahmenbedingungen des Vertrags einholen",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 6,
+    "CustomDays": -90,
+    "TaskResponsible": {
+      "Id": 17,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 17,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 15,
+    "Name": "Vertrag erstellen",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 6,
+    "CustomDays": -90,
+    "TaskResponsible": {
+      "Id": 18,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 18,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 16,
+    "Name": "Vertrag vor ab neuen Mitarbeitenden per Mail senden",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 6,
+    "CustomDays": -90,
+    "TaskResponsible": {
+      "Id": 19,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 19,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 17,
+    "Name": "Vertrag unterschreiben lassen durch Gesch\u00E4ftsf\u00FChrung",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 6,
+    "CustomDays": -90,
+    "TaskResponsible": {
+      "Id": 20,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 20,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 18,
+    "Name": "Personalbogen inkl. erforderlicher Unterlagen per Mail an neuen MA zusenden und ablegen",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 6,
+    "CustomDays": -90,
+    "TaskResponsible": {
+      "Id": 21,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 21,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 19,
+    "Name": "Unterst\u00FCtzung f\u00FCr Umzug (500 \u20AC) ja/nein abfragen",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 6,
+    "CustomDays": -90,
+    "TaskResponsible": {
+      "Id": 22,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 22,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 20,
+    "Name": "Unterst\u00FCtzung f\u00FCr Umzug (500 \u20AC) an Personal kommunizieren",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 6,
+    "CustomDays": -90,
+    "TaskResponsible": {
+      "Id": 23,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 23,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 21,
+    "Name": "Unterlagen hochladen und \u00C4nderungen einpflegen",
+    "IsArchived": false,
+    "Instruction": "Unterlagen in den jeweiligen Monatsordner f\u00FCr Gehaltsabrechnung DSG hochladen (Vertrag, PB,\r\nPerso, SV-Ausweis) und in der \u00DCbersicht \u00C4nderungen einpflegen",
+    "DueType": 6,
+    "CustomDays": -60,
+    "TaskResponsible": {
+      "Id": 24,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 24,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 22,
+    "Name": "Mail an Ops wegen Vorbereitung/ Bestellung Hardware (Laptop, Handy, etc.) und Einrichtung Accounts",
+    "IsArchived": false,
+    "Instruction": "Betreff: Neue MA: XXX\r\n\r\nLiebes Ops-Team,\r\n\r\nbitte bereitet a) Hardware und b) Accounts f\u00FCr unseren neuen Mitarbeitenden XXX\r\nvor. Er beginnt am XX.YY.ZZZZ als XXX und bekommt die Default-Ausstattung.\r\nBitte gebt mir Bescheid, ob und wann die Ausr\u00FCstung bereit liegt.\r\n\r\nDanke und viele Gr\u00FC\u00DFe",
+    "DueType": 6,
+    "CustomDays": -60,
+    "TaskResponsible": {
+      "Id": 25,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 25,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 23,
+    "Name": "Backoffice bez\u00FCglich Informationen und Termin anschreiben",
+    "IsArchived": false,
+    "Instruction": "Liebes Backoffice-Team,\r\n\r\nwir bekommen am XX.YY.ZZZZ einen neuen Mitarbeitenden: XXX in der Position als XXX.\r\nBitte bereitet unseren makandra-Rucksack inklusive Karte sowie Schl\u00FCssel vor und\r\nbestellt ein vegetarisches Mittagessen f\u00FCr sie/ihn.\r\n\r\nPlant am zweiten Tag auch eine kleine F\u00FChrung durch unser B\u00FCro und auch unser\r\nGeb\u00E4ude mit ein und stellt hier gleich einen Termin mit mir ein.\r\n\r\nBitte versendet auch das Willkommenspaket etwa vier Wochen vor Arbeitsbeginn\r\nfolgende Privatadresse: XXX.\r\n\r\n\u00DCber die genaue Uhrzeit am ersten Arbeitstag informiere ich euch noch in einer\r\nextra E-Mail.\r\n\r\nBuddy wird XXX sein und ist bereits informiert.\r\nBitte gebt mir Bescheid, ob und wann die Ausr\u00FCstung bereit liegt.\r\n\r\nDanke und viele Gr\u00FC\u00DFe",
+    "DueType": 6,
+    "CustomDays": -60,
+    "TaskResponsible": {
+      "Id": 26,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 26,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 24,
+    "Name": "Buddy anfragen/ informieren und Kontakt vermitteln zur Kontaktaufnahme im Vorfeld",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 6,
+    "CustomDays": -60,
+    "TaskResponsible": {
+      "Id": 27,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 27,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 25,
+    "Name": "Einladung neuer MA zu anstehenden Teamevents",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 28,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 28,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 26,
+    "Name": "Vernetzung \u00FCber Soziale Medien",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 29,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 29,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 27,
+    "Name": "Versand Willkommens-Box",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 30,
+      "RoleId": 3,
+      "UserId": null,
+      "TaskRespType": 2
+    },
+    "TaskResponsibleId": 30,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 28,
+    "Name": "Mail zum 1. Tag im B\u00FCro, Vorabinformationen",
+    "IsArchived": false,
+    "Instruction": "(One Pager - FAQs erster Tag), Uhrzeit,\r\nParkm\u00F6glichkeiten, Kleidergr\u00F6\u00DFe und Ansprechpartnern vor Ort",
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 31,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 31,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 29,
+    "Name": "Anlegen in der Time Machine, Einrichten Deskbot-Account und erfragen Mailadresse bei Ops",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 1,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 32,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 32,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 30,
+    "Name": "Eintr\u00E4ge Project Hero im Bereich \u0027Team\u0027",
+    "IsArchived": false,
+    "Instruction": "Senior-Peer, Bereich, Festanstellung seit, Position und\r\nPosition seit",
+    "DueType": 1,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 33,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 33,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 31,
+    "Name": "Kl\u00E4ren Zuordnung Monthly Peer mit GL-Runde",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 1,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 34,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 34,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 32,
+    "Name": "Kl\u00E4ren Zuordnung Buddy",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 1,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 35,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 35,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 33,
+    "Name": "Mail an Backoffice zur genauen Uhrzeit und Kleidergr\u00F6\u00DFe",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 1,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 36,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 36,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 34,
+    "Name": "Mail Ops wegen Ansprechpartner vor Ort",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 1,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 37,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 37,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 35,
+    "Name": "Mail Buddy wegen Anwesenheit im B\u00FCro",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 1,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 38,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 38,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 36,
+    "Name": "Brief ausdrucken",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 1,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 39,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 39,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 37,
+    "Name": "Willkommensmail an das Team \u00FCber alle@ versenden",
+    "IsArchived": false,
+    "Instruction": "Liebes Team,\r\n\r\n_Vorname_ _Nachname_ wird uns ab dem DD.MM.YYYY im Bereich Entwicklung /\r\nBackoffice / Operations / UI/UX / Marketing unterst\u00FCtzen.\r\n\r\nHerzlich Willkommen bei makandra!\r\n\r\nViele Gr\u00FC\u00DFe",
+    "DueType": 1,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 40,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 40,
+    "Departments": [],
+    "ContractTypes": [
+      0
+    ]
+  },
+  {
+    "Id": 38,
+    "Name": "Willkommensmail an das Team \u00FCber alle@ versenden",
+    "IsArchived": false,
+    "Instruction": "Liebes Team,\r\n\r\n_Vorname_ _Nachname_ wird ab dem DD.MM.YYYY unser Trainee-Programm im Bereich\r\nEntwicklung / Operations absolvieren.\r\n\r\nHerzlich Willkommen bei makandra und viel Erfolg!\r\n\r\nViele Gr\u00FC\u00DFe",
+    "DueType": 1,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 41,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 41,
+    "Departments": [],
+    "ContractTypes": [
+      3
+    ]
+  },
+  {
+    "Id": 39,
+    "Name": "Empfang durch Backoffice und People \u0026 Culture",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 42,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 42,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 40,
+    "Name": "\u00DCbergabe Package, Schl\u00FCssel, Karte und Hardware",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 43,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 43,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 41,
+    "Name": "Vorstellung Buddy",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 44,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 44,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 42,
+    "Name": "Begleitung durch Ops bei der Einrichtung PC",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 45,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 45,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 43,
+    "Name": "B\u00FCrof\u00FChrung, Vorstellung Kolleg*innen und Schl\u00FCssel-/ Karten\u00FCbergabe durch Backoffice",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 46,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 46,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 44,
+    "Name": "Gemeinsames Mittagessen mit Buddy",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 47,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 47,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 45,
+    "Name": " Erkl\u00E4rung Organisatorisches und fehlende Unterlagen (NachwG, Datenschutz) durch People \u0026 Culture",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 48,
+      "RoleId": 5,
+      "UserId": null,
+      "TaskRespType": 2
+    },
+    "TaskResponsibleId": 48,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 46,
+    "Name": "Einrichtung PC und Accounts abschlie\u00DFen inkl. Erstellung Sicherungskopie mit Ops",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 49,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 49,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 47,
+    "Name": "Begr\u00FC\u00DFung im Weekly",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 50,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 50,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 48,
+    "Name": "Angekommen? Erwartungen? Fragen? Onboarding-Card 2. Teil? (People \u0026 Culture)",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 3,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 51,
+      "RoleId": 5,
+      "UserId": null,
+      "TaskRespType": 2
+    },
+    "TaskResponsibleId": 51,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 49,
+    "Name": "Angekommen? Erwartungen und Zufriedenheit? Verbesserungsvorschl\u00E4ge?",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 4,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 52,
+      "RoleId": 5,
+      "UserId": null,
+      "TaskRespType": 2
+    },
+    "TaskResponsibleId": 52,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 50,
+    "Name": "Angekommen? Perspektiven? Probezeitende",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 5,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 53,
+      "RoleId": 4,
+      "UserId": null,
+      "TaskRespType": 2
+    },
+    "TaskResponsibleId": 53,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 51,
+    "Name": "Termine f\u00FCr Onboarding-Gespr\u00E4che",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 5,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 54,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 54,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 52,
+    "Name": "Termine f\u00FCr Probezeit und Festanstellung Trainee",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 5,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 55,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 55,
+    "Departments": [],
+    "ContractTypes": [
+      0,
+      3
+    ]
+  },
+  {
+    "Id": 53,
+    "Name": "Create Gitlab-account",
+    "IsArchived": false,
+    "Instruction": "* [ ] If the new user is a tech employee, create an account for the user in [GitLab](https://code.makandra.de/admin/users/new) and have the password mailed to them.",
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 193,
+      "RoleId": 2,
+      "UserId": null,
+      "TaskRespType": 2
+    },
+    "TaskResponsibleId": 193,
+    "Departments": [
+      {
+        "Id": 1,
+        "Name": "Entwicklung"
+      }
+    ],
+    "ContractTypes": []
+  },
+  {
+    "Id": 54,
+    "Name": "Invite user to card decks",
+    "IsArchived": false,
+    "Instruction": "* [ ] Invite the user to the following cards decks: \u0060dev\u0060, \u0060orga\u0060, \u0060besprechungsprotokolle\u0060, \u0060zammad\u0060, \u0060makandra operations\u0060, \u0060makandra projektvorstellungen\u0060 and \u0060makandra-projektleitung-curriculum\u0060.",
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 194,
+      "RoleId": 2,
+      "UserId": null,
+      "TaskRespType": 2
+    },
+    "TaskResponsibleId": 194,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 55,
+    "Name": "Request an invite in Slack",
+    "IsArchived": false,
+    "Instruction": "* [ ] Request an invite in Slack via the Top-Right-Button that says \u0060makandra\u0060 and fill out the form. The request will be auto-approved because the e-mail ends with \u0060@makandra.de\u0060.",
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 195,
+      "RoleId": 2,
+      "UserId": null,
+      "TaskRespType": 2
+    },
+    "TaskResponsibleId": 195,
+    "Departments": [],
+    "ContractTypes": []
+  }
+]

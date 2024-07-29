@@ -1,0 +1,179 @@
+@model SoPro24Team03.ViewModels.EditProcedureViewModel
+@{
+    ViewData["Title"] = "Vorgang bearbeiten";
+}
+
+<style>
+    .sortable {
+        list-style-type: none;
+    }
+
+    .sortable-item {
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    .display-container {
+        overflow: scroll;
+    }
+</style>
+
+<div class="row m-2">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="OrderedTaskInstIds" />
+            <div class="form-group pb-3">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" readonly="@(!Model.isAdmin)" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group pb-3">
+                <label asp-for="ReferId" class="control-label"></label><br>
+                <select asp-for="ReferId" asp-items="Model.AllUsers" disabled="@(!Model.isAdmin)"></select>
+                <span asp-validation-for="ReferId" class="text-danger"></span>
+            </div>
+            <div class="form-group pb-3">
+                <label asp-for="RespId" class="control-label"></label><br>
+                <select asp-for="RespId" asp-items="Model.AllUsers" disabled="@(!Model.isAdmin)"></select>
+                <span asp-validation-for="RespId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group pb-3">
+                <label asp-for="TargetDate" class="control-label"></label>
+                <input asp-for="TargetDate" class="form-control" readonly="@(!Model.isAdmin)" />
+                <span asp-validation-for="TargetDate" class="text-danger"></span>
+            </div>
+            <div class="form-group pb-3">
+                <label asp-for="ContractType" class="control-label"></label><br>
+                <select asp-for="ContractType" asp-items="Html.GetEnumSelectList<ContractType>()" disabled="@(!Model.isAdmin)">
+                    <option value="">-</option>
+                </select>
+                <span asp-validation-for="ContractType" class="text-danger"></span>
+            </div>
+            <div class="form-group pb-4">
+                <label asp-for="FutureDepartmentId" class="control-label"></label><br>
+                <select asp-for="FutureDepartmentId" asp-items="Model.AllDepartments" disabled="@(!Model.isAdmin)">
+                    <option value="">-</option>
+                </select>
+                <span asp-validation-for="FutureDepartmentId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group pb-2">
+                <input type="submit" value="Speichern" class="btn btn-primary" />
+            </div>
+        </form>
+        <form asp-action="Archive" asp-route-id="@Model.Id" method="post">
+            <button type="submit" class="btn btn-danger">abschließen</button>
+        </form>
+    </div>
+    
+    <div class="col-md border rounded-3">
+        <h3>Aufgaben <span style="font-size:20px">(@Model.NumTasksDone / @Model.NumTasksTotal)</span></h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Zuständiger</th>
+                    <th scope="col">Zieldatum</th>
+                    <th scope="col">Status</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody id="taskContainer" class="sortable"></tbody>
+        </table>
+        <div class="d-flex justify-content-center m-2">
+            <a class="btn btn-primary" title="Neue Aufgabe hinzufügen" asp-area="" asp-controller="TaskInst" asp-action="Create" asp-route-id="@Model.Id">
+                <i class="bi bi-plus"> </i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container m-2 pt-3">
+    <a asp-action="Index">Zurück zur Übersicht</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        $(document).ready(function () {
+            // add tasks to taskContainer
+            @foreach (var task in Model.Tasks!) {
+                var styleStr = task.isOverdue() ? "color:red; font-weight:bold;" : "";
+                @Html.Raw($"createHtmlAndPushToContainer({task.Id}, \"{task.Name}\", \"{task.Resp.DisplayName()}\", \"{task.TargetDate}\", \"{task.Status.GetDisplayName()}\", \"{styleStr}\");\n");
+            }
+
+            // make taskContainer sortable
+            $('.sortable').sortable({
+                // when the order of tasks changes, update OrderedTaskInstIds in hidden input field
+                stop: function (event, ui) {
+                    setOrderString(getOrderIDs());
+                }
+            });
+
+            var storedOrderIDs = getOrderString().split(",");
+            var allTaskIDs = getOrderIDs();
+
+            // remove tasks that have since been deleted
+            storedOrderIDs = storedOrderIDs.filter(
+                (taskId) => allTaskIDs.includes(taskId)
+            );
+
+            // append tasks that have since been added
+            allTaskIDs.forEach((taskId) => {
+                if (!storedOrderIDs.includes(taskId)) {
+                    storedOrderIDs.push(taskId);
+                }
+            });
+
+            // sort container based on updated order
+            sortContainer(storedOrderIDs);
+            setOrderString(storedOrderIDs);
+        });
+
+        function getOrderIDs() {
+            return $(".sortable").sortable("toArray", { attribute: "data-id" });
+        }
+
+        function getOrderString() {
+            return $('#OrderedTaskInstIds').val();
+        }
+
+        function setOrderString(orderIDs) {
+            var orderStr = orderIDs.join(",");
+            $('#OrderedTaskInstIds').val(orderStr);
+            return orderStr;
+        }
+
+        function sortContainer(orderIDs) {
+            var $container = $('#taskContainer');
+            var sortedElements = orderIDs.map(function(id) {
+                return $container.find('.task[data-id="'+ id + '"]');
+            });
+            $container.empty().append(sortedElements);
+        }
+
+        function createHtmlAndPushToContainer(id, name, resp, date, status, style) {
+            const taskHtml = `
+                <tr class="task" data-id="${id}" style="${style}">
+                    <th scope="row">${id}</th>
+                    <td>${name}</td>
+                    <td>${resp}</td>
+                    <td>${date}</td>
+                    <td>${status}</td>
+                    <td class="text-nowrap">
+                        <a class="btn btn-primary" title="bearbeiten" href="/TaskInst/Edit/${id}">
+                            <i class="bi bi-pencil"> </i>
+                        </a>
+                        <a class="btn btn-primary" title="löschen" href="/TaskInst/Delete/${id}">
+                            <i class="bi bi-trash"> </i>
+                        </a>
+                    </td>
+                </tr>`;
+            $('#taskContainer').append(taskHtml);
+        }
+    </script>
+}

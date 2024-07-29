@@ -1,0 +1,2659 @@
+[
+  {
+    "Id": 1,
+    "Name": "On-Boarding",
+    "TargetDate": "2024-06-25T08:32:10",
+    "IsArchived": false,
+    "NumTasksDone": 0,
+    "NumTasksTotal": 1,
+    "CreatedContractType": 1,
+    "TaskInsts": [
+      {
+        "Id": 1,
+        "Name": "SSH-Key erstellen",
+        "TargetDate": "2024-06-30T22:56:30",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 1,
+        "TemplateId": 1,
+        "RespId": 2,
+        "Resp": {
+          "Id": 2,
+          "RoleId": 2,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      }
+    ],
+    "OrderedTaskInstIds": "1",
+    "TemplateId": 1,
+    "FutureDepartmentId": 1,
+    "RespId": 3,
+    "ReferId": 4
+  },
+  {
+    "Id": 2,
+    "Name": "Prokrastinieren1",
+    "TargetDate": "2024-07-30T22:03:47.427",
+    "IsArchived": false,
+    "NumTasksDone": 1,
+    "NumTasksTotal": 4,
+    "CreatedContractType": null,
+    "TaskInsts": [
+      {
+        "Id": 2,
+        "Name": "D\u00E4umchen Drehen",
+        "TargetDate": "2024-07-30T22:03:47.427",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [
+          {
+            "Id": 1,
+            "CreationDate": "2024-07-26T22:04:53.3252772",
+            "VisibleToOthers": true,
+            "Title": "Beachten",
+            "Text": "Sehr wichtige Aufgabe.",
+            "AuthorId": 3,
+            "TaskInstId": 2
+          }
+        ],
+        "ProcedureId": 2,
+        "TemplateId": 2,
+        "RespId": 4,
+        "Resp": {
+          "Id": 4,
+          "RoleId": null,
+          "UserId": 3,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 3,
+        "Name": "Nichts tun",
+        "TargetDate": "2024-07-26T22:05:09.76",
+        "IsArchived": false,
+        "Status": 1,
+        "Notes": [],
+        "ProcedureId": 2,
+        "TemplateId": null,
+        "RespId": 5,
+        "Resp": {
+          "Id": 5,
+          "RoleId": 1,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 150,
+        "Name": "TestTaskTempl1",
+        "TargetDate": "2024-09-30T22:03:47.427",
+        "IsArchived": false,
+        "Status": 1,
+        "Notes": [],
+        "ProcedureId": 2,
+        "TemplateId": 3,
+        "RespId": 342,
+        "Resp": {
+          "Id": 342,
+          "RoleId": null,
+          "UserId": 3,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 151,
+        "Name": "TestTaskTempl2",
+        "TargetDate": "2024-06-20T22:03:47.427",
+        "IsArchived": false,
+        "Status": 1,
+        "Notes": [],
+        "ProcedureId": 2,
+        "TemplateId": 4,
+        "RespId": 343,
+        "Resp": {
+          "Id": 343,
+          "RoleId": null,
+          "UserId": 3,
+          "TaskRespType": 3
+        }
+      }
+    ],
+    "OrderedTaskInstIds": "2,3,150,151",
+    "TemplateId": 2,
+    "FutureDepartmentId": null,
+    "RespId": 3,
+    "ReferId": 3
+  },
+  {
+    "Id": 3,
+    "Name": "Neuzugang HR",
+    "TargetDate": "2024-09-13T12:00:00",
+    "IsArchived": false,
+    "NumTasksDone": 0,
+    "NumTasksTotal": 48,
+    "CreatedContractType": 3,
+    "TaskInsts": [
+      {
+        "Id": 4,
+        "Name": "Create GSuite account",
+        "TargetDate": "2024-09-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 1,
+        "RespId": 196,
+        "Resp": {
+          "Id": 196,
+          "RoleId": 2,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 5,
+        "Name": "Grundlagen der B\u00FCro-IT-Sicherheit",
+        "TargetDate": "2024-09-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 6,
+        "RespId": 197,
+        "Resp": {
+          "Id": 197,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 6,
+        "Name": "Synchronisation von Passw\u00F6rtern",
+        "TargetDate": "2024-09-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 7,
+        "RespId": 198,
+        "Resp": {
+          "Id": 198,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 7,
+        "Name": "Email checken mit tempor\u00E4ren Passwort",
+        "TargetDate": "2024-09-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 10,
+        "RespId": 199,
+        "Resp": {
+          "Id": 199,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 8,
+        "Name": "SSH-Key hinzuf\u00FCgen",
+        "TargetDate": "2024-09-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 11,
+        "RespId": 200,
+        "Resp": {
+          "Id": 200,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 9,
+        "Name": "2-Faktorauthentifizierung \u00FCber Smartphone",
+        "TargetDate": "2024-09-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 12,
+        "RespId": 201,
+        "Resp": {
+          "Id": 201,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 10,
+        "Name": "Git-Config einrichten",
+        "TargetDate": "2024-09-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 13,
+        "RespId": 202,
+        "Resp": {
+          "Id": 202,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 11,
+        "Name": "Informationen zu Rahmenbedingungen des Vertrags einholen",
+        "TargetDate": "2024-06-15T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 14,
+        "RespId": 203,
+        "Resp": {
+          "Id": 203,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 12,
+        "Name": "Vertrag erstellen",
+        "TargetDate": "2024-06-15T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 15,
+        "RespId": 204,
+        "Resp": {
+          "Id": 204,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 13,
+        "Name": "Vertrag vor ab neuen Mitarbeitenden per Mail senden",
+        "TargetDate": "2024-06-15T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 16,
+        "RespId": 205,
+        "Resp": {
+          "Id": 205,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 14,
+        "Name": "Vertrag unterschreiben lassen durch Gesch\u00E4ftsf\u00FChrung",
+        "TargetDate": "2024-06-15T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 17,
+        "RespId": 206,
+        "Resp": {
+          "Id": 206,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 15,
+        "Name": "Personalbogen inkl. erforderlicher Unterlagen per Mail an neuen MA zusenden und ablegen",
+        "TargetDate": "2024-06-15T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 18,
+        "RespId": 207,
+        "Resp": {
+          "Id": 207,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 16,
+        "Name": "Unterst\u00FCtzung f\u00FCr Umzug (500 \u20AC) ja/nein abfragen",
+        "TargetDate": "2024-06-15T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 19,
+        "RespId": 208,
+        "Resp": {
+          "Id": 208,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 17,
+        "Name": "Unterst\u00FCtzung f\u00FCr Umzug (500 \u20AC) an Personal kommunizieren",
+        "TargetDate": "2024-06-15T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 20,
+        "RespId": 209,
+        "Resp": {
+          "Id": 209,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 18,
+        "Name": "Unterlagen hochladen und \u00C4nderungen einpflegen",
+        "TargetDate": "2024-07-15T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 21,
+        "RespId": 210,
+        "Resp": {
+          "Id": 210,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 19,
+        "Name": "Mail an Ops wegen Vorbereitung/ Bestellung Hardware (Laptop, Handy, etc.) und Einrichtung Accounts",
+        "TargetDate": "2024-07-15T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 22,
+        "RespId": 211,
+        "Resp": {
+          "Id": 211,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 20,
+        "Name": "Backoffice bez\u00FCglich Informationen und Termin anschreiben",
+        "TargetDate": "2024-07-15T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 23,
+        "RespId": 212,
+        "Resp": {
+          "Id": 212,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 21,
+        "Name": "Buddy anfragen/ informieren und Kontakt vermitteln zur Kontaktaufnahme im Vorfeld",
+        "TargetDate": "2024-07-15T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 24,
+        "RespId": 213,
+        "Resp": {
+          "Id": 213,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 22,
+        "Name": "Einladung neuer MA zu anstehenden Teamevents",
+        "TargetDate": "2024-09-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 25,
+        "RespId": 214,
+        "Resp": {
+          "Id": 214,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 23,
+        "Name": "Vernetzung \u00FCber Soziale Medien",
+        "TargetDate": "2024-09-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 26,
+        "RespId": 215,
+        "Resp": {
+          "Id": 215,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 24,
+        "Name": "Versand Willkommens-Box",
+        "TargetDate": "2024-09-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 27,
+        "RespId": 216,
+        "Resp": {
+          "Id": 216,
+          "RoleId": 3,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 25,
+        "Name": "Mail zum 1. Tag im B\u00FCro, Vorabinformationen",
+        "TargetDate": "2024-09-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 28,
+        "RespId": 217,
+        "Resp": {
+          "Id": 217,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 26,
+        "Name": "Anlegen in der Time Machine, Einrichten Deskbot-Account und erfragen Mailadresse bei Ops",
+        "TargetDate": "2024-08-30T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 29,
+        "RespId": 218,
+        "Resp": {
+          "Id": 218,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 27,
+        "Name": "Eintr\u00E4ge Project Hero im Bereich \u0027Team\u0027",
+        "TargetDate": "2024-08-30T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 30,
+        "RespId": 219,
+        "Resp": {
+          "Id": 219,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 28,
+        "Name": "Kl\u00E4ren Zuordnung Monthly Peer mit GL-Runde",
+        "TargetDate": "2024-08-30T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 31,
+        "RespId": 220,
+        "Resp": {
+          "Id": 220,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 29,
+        "Name": "Kl\u00E4ren Zuordnung Buddy",
+        "TargetDate": "2024-08-30T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 32,
+        "RespId": 221,
+        "Resp": {
+          "Id": 221,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 30,
+        "Name": "Mail an Backoffice zur genauen Uhrzeit und Kleidergr\u00F6\u00DFe",
+        "TargetDate": "2024-08-30T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 33,
+        "RespId": 222,
+        "Resp": {
+          "Id": 222,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 31,
+        "Name": "Mail Ops wegen Ansprechpartner vor Ort",
+        "TargetDate": "2024-08-30T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 34,
+        "RespId": 223,
+        "Resp": {
+          "Id": 223,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 32,
+        "Name": "Mail Buddy wegen Anwesenheit im B\u00FCro",
+        "TargetDate": "2024-08-30T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 35,
+        "RespId": 224,
+        "Resp": {
+          "Id": 224,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 33,
+        "Name": "Brief ausdrucken",
+        "TargetDate": "2024-08-30T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 36,
+        "RespId": 225,
+        "Resp": {
+          "Id": 225,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 34,
+        "Name": "Willkommensmail an das Team \u00FCber alle@ versenden",
+        "TargetDate": "2024-08-30T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 38,
+        "RespId": 226,
+        "Resp": {
+          "Id": 226,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 35,
+        "Name": "Empfang durch Backoffice und People \u0026 Culture",
+        "TargetDate": "2024-09-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 39,
+        "RespId": 227,
+        "Resp": {
+          "Id": 227,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 36,
+        "Name": "\u00DCbergabe Package, Schl\u00FCssel, Karte und Hardware",
+        "TargetDate": "2024-09-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 40,
+        "RespId": 228,
+        "Resp": {
+          "Id": 228,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 37,
+        "Name": "Vorstellung Buddy",
+        "TargetDate": "2024-09-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 41,
+        "RespId": 229,
+        "Resp": {
+          "Id": 229,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 38,
+        "Name": "Begleitung durch Ops bei der Einrichtung PC",
+        "TargetDate": "2024-09-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 42,
+        "RespId": 230,
+        "Resp": {
+          "Id": 230,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 39,
+        "Name": "B\u00FCrof\u00FChrung, Vorstellung Kolleg*innen und Schl\u00FCssel-/ Karten\u00FCbergabe durch Backoffice",
+        "TargetDate": "2024-09-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 43,
+        "RespId": 231,
+        "Resp": {
+          "Id": 231,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 40,
+        "Name": "Gemeinsames Mittagessen mit Buddy",
+        "TargetDate": "2024-09-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 44,
+        "RespId": 232,
+        "Resp": {
+          "Id": 232,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 41,
+        "Name": " Erkl\u00E4rung Organisatorisches und fehlende Unterlagen (NachwG, Datenschutz) durch People \u0026 Culture",
+        "TargetDate": "2024-09-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 45,
+        "RespId": 233,
+        "Resp": {
+          "Id": 233,
+          "RoleId": 5,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 42,
+        "Name": "Einrichtung PC und Accounts abschlie\u00DFen inkl. Erstellung Sicherungskopie mit Ops",
+        "TargetDate": "2024-09-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 46,
+        "RespId": 234,
+        "Resp": {
+          "Id": 234,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 43,
+        "Name": "Begr\u00FC\u00DFung im Weekly",
+        "TargetDate": "2024-09-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 47,
+        "RespId": 235,
+        "Resp": {
+          "Id": 235,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 44,
+        "Name": "Angekommen? Erwartungen? Fragen? Onboarding-Card 2. Teil? (People \u0026 Culture)",
+        "TargetDate": "2024-10-04T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 48,
+        "RespId": 236,
+        "Resp": {
+          "Id": 236,
+          "RoleId": 5,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 45,
+        "Name": "Angekommen? Erwartungen und Zufriedenheit? Verbesserungsvorschl\u00E4ge?",
+        "TargetDate": "2024-12-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 49,
+        "RespId": 237,
+        "Resp": {
+          "Id": 237,
+          "RoleId": 5,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 46,
+        "Name": "Angekommen? Perspektiven? Probezeitende",
+        "TargetDate": "2025-03-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 50,
+        "RespId": 238,
+        "Resp": {
+          "Id": 238,
+          "RoleId": 4,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 47,
+        "Name": "Termine f\u00FCr Onboarding-Gespr\u00E4che",
+        "TargetDate": "2025-03-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 51,
+        "RespId": 239,
+        "Resp": {
+          "Id": 239,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 48,
+        "Name": "Termine f\u00FCr Probezeit und Festanstellung Trainee",
+        "TargetDate": "2025-03-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 52,
+        "RespId": 240,
+        "Resp": {
+          "Id": 240,
+          "RoleId": null,
+          "UserId": 7,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 49,
+        "Name": "Create Gitlab-account",
+        "TargetDate": "2024-09-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 53,
+        "RespId": 241,
+        "Resp": {
+          "Id": 241,
+          "RoleId": 2,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 50,
+        "Name": "Invite user to card decks",
+        "TargetDate": "2024-09-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 54,
+        "RespId": 242,
+        "Resp": {
+          "Id": 242,
+          "RoleId": 2,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 51,
+        "Name": "Request an invite in Slack",
+        "TargetDate": "2024-09-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 3,
+        "TemplateId": 55,
+        "RespId": 243,
+        "Resp": {
+          "Id": 243,
+          "RoleId": 2,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      }
+    ],
+    "OrderedTaskInstIds": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51",
+    "TemplateId": 1,
+    "FutureDepartmentId": 6,
+    "RespId": 7,
+    "ReferId": 9
+  },
+  {
+    "Id": 4,
+    "Name": "Neuzugang IT",
+    "TargetDate": "2024-07-27T12:00:00",
+    "IsArchived": true,
+    "NumTasksDone": 50,
+    "NumTasksTotal": 50,
+    "CreatedContractType": 0,
+    "TaskInsts": [
+      {
+        "Id": 52,
+        "Name": "Create GSuite account",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 1,
+        "RespId": 244,
+        "Resp": {
+          "Id": 244,
+          "RoleId": 2,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 53,
+        "Name": "Grundlagen der B\u00FCro-IT-Sicherheit",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 6,
+        "RespId": 245,
+        "Resp": {
+          "Id": 245,
+          "RoleId": null,
+          "UserId": 10,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 54,
+        "Name": "Synchronisation von Passw\u00F6rtern",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 7,
+        "RespId": 246,
+        "Resp": {
+          "Id": 246,
+          "RoleId": null,
+          "UserId": 10,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 55,
+        "Name": "Erstellen eines Hashes",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 8,
+        "RespId": 247,
+        "Resp": {
+          "Id": 247,
+          "RoleId": null,
+          "UserId": 10,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 56,
+        "Name": "Bitte um Aufnehmung in die Basisauthentifizierung",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 9,
+        "RespId": 248,
+        "Resp": {
+          "Id": 248,
+          "RoleId": null,
+          "UserId": 10,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 57,
+        "Name": "Email checken mit tempor\u00E4ren Passwort",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 10,
+        "RespId": 249,
+        "Resp": {
+          "Id": 249,
+          "RoleId": null,
+          "UserId": 10,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 58,
+        "Name": "SSH-Key hinzuf\u00FCgen",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 11,
+        "RespId": 250,
+        "Resp": {
+          "Id": 250,
+          "RoleId": null,
+          "UserId": 10,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 59,
+        "Name": "2-Faktorauthentifizierung \u00FCber Smartphone",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 12,
+        "RespId": 251,
+        "Resp": {
+          "Id": 251,
+          "RoleId": null,
+          "UserId": 10,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 60,
+        "Name": "Git-Config einrichten",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 13,
+        "RespId": 252,
+        "Resp": {
+          "Id": 252,
+          "RoleId": null,
+          "UserId": 10,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 61,
+        "Name": "Informationen zu Rahmenbedingungen des Vertrags einholen",
+        "TargetDate": "2024-04-28T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 14,
+        "RespId": 253,
+        "Resp": {
+          "Id": 253,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 62,
+        "Name": "Vertrag erstellen",
+        "TargetDate": "2024-04-28T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 15,
+        "RespId": 254,
+        "Resp": {
+          "Id": 254,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 63,
+        "Name": "Vertrag vor ab neuen Mitarbeitenden per Mail senden",
+        "TargetDate": "2024-04-28T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 16,
+        "RespId": 255,
+        "Resp": {
+          "Id": 255,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 64,
+        "Name": "Vertrag unterschreiben lassen durch Gesch\u00E4ftsf\u00FChrung",
+        "TargetDate": "2024-04-28T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 17,
+        "RespId": 256,
+        "Resp": {
+          "Id": 256,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 65,
+        "Name": "Personalbogen inkl. erforderlicher Unterlagen per Mail an neuen MA zusenden und ablegen",
+        "TargetDate": "2024-04-28T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 18,
+        "RespId": 257,
+        "Resp": {
+          "Id": 257,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 66,
+        "Name": "Unterst\u00FCtzung f\u00FCr Umzug (500 \u20AC) ja/nein abfragen",
+        "TargetDate": "2024-04-28T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 19,
+        "RespId": 258,
+        "Resp": {
+          "Id": 258,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 67,
+        "Name": "Unterst\u00FCtzung f\u00FCr Umzug (500 \u20AC) an Personal kommunizieren",
+        "TargetDate": "2024-04-28T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 20,
+        "RespId": 259,
+        "Resp": {
+          "Id": 259,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 68,
+        "Name": "Unterlagen hochladen und \u00C4nderungen einpflegen",
+        "TargetDate": "2024-05-28T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 21,
+        "RespId": 260,
+        "Resp": {
+          "Id": 260,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 69,
+        "Name": "Mail an Ops wegen Vorbereitung/ Bestellung Hardware (Laptop, Handy, etc.) und Einrichtung Accounts",
+        "TargetDate": "2024-05-28T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 22,
+        "RespId": 261,
+        "Resp": {
+          "Id": 261,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 70,
+        "Name": "Backoffice bez\u00FCglich Informationen und Termin anschreiben",
+        "TargetDate": "2024-05-28T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 23,
+        "RespId": 262,
+        "Resp": {
+          "Id": 262,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 71,
+        "Name": "Buddy anfragen/ informieren und Kontakt vermitteln zur Kontaktaufnahme im Vorfeld",
+        "TargetDate": "2024-05-28T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 24,
+        "RespId": 263,
+        "Resp": {
+          "Id": 263,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 72,
+        "Name": "Einladung neuer MA zu anstehenden Teamevents",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 25,
+        "RespId": 264,
+        "Resp": {
+          "Id": 264,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 73,
+        "Name": "Vernetzung \u00FCber Soziale Medien",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 26,
+        "RespId": 265,
+        "Resp": {
+          "Id": 265,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 74,
+        "Name": "Versand Willkommens-Box",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 27,
+        "RespId": 266,
+        "Resp": {
+          "Id": 266,
+          "RoleId": 3,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 75,
+        "Name": "Mail zum 1. Tag im B\u00FCro, Vorabinformationen",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 28,
+        "RespId": 267,
+        "Resp": {
+          "Id": 267,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 76,
+        "Name": "Anlegen in der Time Machine, Einrichten Deskbot-Account und erfragen Mailadresse bei Ops",
+        "TargetDate": "2024-07-13T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 29,
+        "RespId": 268,
+        "Resp": {
+          "Id": 268,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 77,
+        "Name": "Eintr\u00E4ge Project Hero im Bereich \u0027Team\u0027",
+        "TargetDate": "2024-07-13T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 30,
+        "RespId": 269,
+        "Resp": {
+          "Id": 269,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 78,
+        "Name": "Kl\u00E4ren Zuordnung Monthly Peer mit GL-Runde",
+        "TargetDate": "2024-07-13T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 31,
+        "RespId": 270,
+        "Resp": {
+          "Id": 270,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 79,
+        "Name": "Kl\u00E4ren Zuordnung Buddy",
+        "TargetDate": "2024-07-13T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 32,
+        "RespId": 271,
+        "Resp": {
+          "Id": 271,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 80,
+        "Name": "Mail an Backoffice zur genauen Uhrzeit und Kleidergr\u00F6\u00DFe",
+        "TargetDate": "2024-07-13T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 33,
+        "RespId": 272,
+        "Resp": {
+          "Id": 272,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 81,
+        "Name": "Mail Ops wegen Ansprechpartner vor Ort",
+        "TargetDate": "2024-07-13T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 34,
+        "RespId": 273,
+        "Resp": {
+          "Id": 273,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 82,
+        "Name": "Mail Buddy wegen Anwesenheit im B\u00FCro",
+        "TargetDate": "2024-07-13T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 35,
+        "RespId": 274,
+        "Resp": {
+          "Id": 274,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 83,
+        "Name": "Brief ausdrucken",
+        "TargetDate": "2024-07-13T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 36,
+        "RespId": 275,
+        "Resp": {
+          "Id": 275,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 84,
+        "Name": "Willkommensmail an das Team \u00FCber alle@ versenden",
+        "TargetDate": "2024-07-13T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 37,
+        "RespId": 276,
+        "Resp": {
+          "Id": 276,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 85,
+        "Name": "Empfang durch Backoffice und People \u0026 Culture",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 39,
+        "RespId": 277,
+        "Resp": {
+          "Id": 277,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 86,
+        "Name": "\u00DCbergabe Package, Schl\u00FCssel, Karte und Hardware",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 40,
+        "RespId": 278,
+        "Resp": {
+          "Id": 278,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 87,
+        "Name": "Vorstellung Buddy",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 41,
+        "RespId": 279,
+        "Resp": {
+          "Id": 279,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 88,
+        "Name": "Begleitung durch Ops bei der Einrichtung PC",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 42,
+        "RespId": 280,
+        "Resp": {
+          "Id": 280,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 89,
+        "Name": "B\u00FCrof\u00FChrung, Vorstellung Kolleg*innen und Schl\u00FCssel-/ Karten\u00FCbergabe durch Backoffice",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 43,
+        "RespId": 281,
+        "Resp": {
+          "Id": 281,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 90,
+        "Name": "Gemeinsames Mittagessen mit Buddy",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 44,
+        "RespId": 282,
+        "Resp": {
+          "Id": 282,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 91,
+        "Name": " Erkl\u00E4rung Organisatorisches und fehlende Unterlagen (NachwG, Datenschutz) durch People \u0026 Culture",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 45,
+        "RespId": 283,
+        "Resp": {
+          "Id": 283,
+          "RoleId": 5,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 92,
+        "Name": "Einrichtung PC und Accounts abschlie\u00DFen inkl. Erstellung Sicherungskopie mit Ops",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 46,
+        "RespId": 284,
+        "Resp": {
+          "Id": 284,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 93,
+        "Name": "Begr\u00FC\u00DFung im Weekly",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 47,
+        "RespId": 285,
+        "Resp": {
+          "Id": 285,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 94,
+        "Name": "Angekommen? Erwartungen? Fragen? Onboarding-Card 2. Teil? (People \u0026 Culture)",
+        "TargetDate": "2024-08-17T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 48,
+        "RespId": 286,
+        "Resp": {
+          "Id": 286,
+          "RoleId": 5,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 95,
+        "Name": "Angekommen? Erwartungen und Zufriedenheit? Verbesserungsvorschl\u00E4ge?",
+        "TargetDate": "2024-10-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 49,
+        "RespId": 287,
+        "Resp": {
+          "Id": 287,
+          "RoleId": 5,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 96,
+        "Name": "Angekommen? Perspektiven? Probezeitende",
+        "TargetDate": "2025-01-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 50,
+        "RespId": 288,
+        "Resp": {
+          "Id": 288,
+          "RoleId": 4,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 97,
+        "Name": "Termine f\u00FCr Onboarding-Gespr\u00E4che",
+        "TargetDate": "2025-01-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 51,
+        "RespId": 289,
+        "Resp": {
+          "Id": 289,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 98,
+        "Name": "Termine f\u00FCr Probezeit und Festanstellung Trainee",
+        "TargetDate": "2025-01-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 52,
+        "RespId": 290,
+        "Resp": {
+          "Id": 290,
+          "RoleId": null,
+          "UserId": 8,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 99,
+        "Name": "Create Gitlab-account",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 53,
+        "RespId": 291,
+        "Resp": {
+          "Id": 291,
+          "RoleId": 2,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 100,
+        "Name": "Invite user to card decks",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 54,
+        "RespId": 292,
+        "Resp": {
+          "Id": 292,
+          "RoleId": 2,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 101,
+        "Name": "Request an invite in Slack",
+        "TargetDate": "2024-07-27T12:00:00",
+        "IsArchived": true,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 4,
+        "TemplateId": 55,
+        "RespId": 293,
+        "Resp": {
+          "Id": 293,
+          "RoleId": 2,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      }
+    ],
+    "OrderedTaskInstIds": "52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101",
+    "TemplateId": 1,
+    "FutureDepartmentId": 1,
+    "RespId": 8,
+    "ReferId": 10
+  },
+  {
+    "Id": 5,
+    "Name": "Neuzugang IT/Trainee",
+    "TargetDate": "2024-10-13T12:00:00",
+    "IsArchived": false,
+    "NumTasksDone": 47,
+    "NumTasksTotal": 48,
+    "CreatedContractType": 3,
+    "TaskInsts": [
+      {
+        "Id": 102,
+        "Name": "Create GSuite account",
+        "TargetDate": "2024-10-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 1,
+        "RespId": 294,
+        "Resp": {
+          "Id": 294,
+          "RoleId": 2,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 103,
+        "Name": "Grundlagen der B\u00FCro-IT-Sicherheit",
+        "TargetDate": "2024-10-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 6,
+        "RespId": 295,
+        "Resp": {
+          "Id": 295,
+          "RoleId": null,
+          "UserId": 11,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 104,
+        "Name": "Synchronisation von Passw\u00F6rtern",
+        "TargetDate": "2024-10-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 7,
+        "RespId": 296,
+        "Resp": {
+          "Id": 296,
+          "RoleId": null,
+          "UserId": 11,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 105,
+        "Name": "Email checken mit tempor\u00E4ren Passwort",
+        "TargetDate": "2024-10-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 10,
+        "RespId": 297,
+        "Resp": {
+          "Id": 297,
+          "RoleId": null,
+          "UserId": 11,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 106,
+        "Name": "SSH-Key hinzuf\u00FCgen",
+        "TargetDate": "2024-10-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 11,
+        "RespId": 298,
+        "Resp": {
+          "Id": 298,
+          "RoleId": null,
+          "UserId": 11,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 107,
+        "Name": "2-Faktorauthentifizierung \u00FCber Smartphone",
+        "TargetDate": "2024-10-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 12,
+        "RespId": 299,
+        "Resp": {
+          "Id": 299,
+          "RoleId": null,
+          "UserId": 11,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 108,
+        "Name": "Git-Config einrichten",
+        "TargetDate": "2024-10-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 13,
+        "RespId": 300,
+        "Resp": {
+          "Id": 300,
+          "RoleId": null,
+          "UserId": 11,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 109,
+        "Name": "Informationen zu Rahmenbedingungen des Vertrags einholen",
+        "TargetDate": "2024-07-15T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 14,
+        "RespId": 301,
+        "Resp": {
+          "Id": 301,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 110,
+        "Name": "Vertrag erstellen",
+        "TargetDate": "2024-07-15T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 15,
+        "RespId": 302,
+        "Resp": {
+          "Id": 302,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 111,
+        "Name": "Vertrag vor ab neuen Mitarbeitenden per Mail senden",
+        "TargetDate": "2024-07-15T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 16,
+        "RespId": 303,
+        "Resp": {
+          "Id": 303,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 112,
+        "Name": "Vertrag unterschreiben lassen durch Gesch\u00E4ftsf\u00FChrung",
+        "TargetDate": "2024-07-15T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 17,
+        "RespId": 304,
+        "Resp": {
+          "Id": 304,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 113,
+        "Name": "Personalbogen inkl. erforderlicher Unterlagen per Mail an neuen MA zusenden und ablegen",
+        "TargetDate": "2024-07-15T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 18,
+        "RespId": 305,
+        "Resp": {
+          "Id": 305,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 114,
+        "Name": "Unterst\u00FCtzung f\u00FCr Umzug (500 \u20AC) ja/nein abfragen",
+        "TargetDate": "2024-07-15T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 19,
+        "RespId": 306,
+        "Resp": {
+          "Id": 306,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 115,
+        "Name": "Unterst\u00FCtzung f\u00FCr Umzug (500 \u20AC) an Personal kommunizieren",
+        "TargetDate": "2024-07-15T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 20,
+        "RespId": 307,
+        "Resp": {
+          "Id": 307,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 116,
+        "Name": "Unterlagen hochladen und \u00C4nderungen einpflegen",
+        "TargetDate": "2024-08-14T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 21,
+        "RespId": 308,
+        "Resp": {
+          "Id": 308,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 117,
+        "Name": "Mail an Ops wegen Vorbereitung/ Bestellung Hardware (Laptop, Handy, etc.) und Einrichtung Accounts",
+        "TargetDate": "2024-08-14T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 22,
+        "RespId": 309,
+        "Resp": {
+          "Id": 309,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 118,
+        "Name": "Backoffice bez\u00FCglich Informationen und Termin anschreiben",
+        "TargetDate": "2024-08-14T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 23,
+        "RespId": 310,
+        "Resp": {
+          "Id": 310,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 119,
+        "Name": "Buddy anfragen/ informieren und Kontakt vermitteln zur Kontaktaufnahme im Vorfeld",
+        "TargetDate": "2024-08-14T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 24,
+        "RespId": 311,
+        "Resp": {
+          "Id": 311,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 120,
+        "Name": "Einladung neuer MA zu anstehenden Teamevents",
+        "TargetDate": "2024-10-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 25,
+        "RespId": 312,
+        "Resp": {
+          "Id": 312,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 121,
+        "Name": "Vernetzung \u00FCber Soziale Medien",
+        "TargetDate": "2024-10-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 26,
+        "RespId": 313,
+        "Resp": {
+          "Id": 313,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 122,
+        "Name": "Versand Willkommens-Box",
+        "TargetDate": "2024-10-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 27,
+        "RespId": 314,
+        "Resp": {
+          "Id": 314,
+          "RoleId": 3,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 123,
+        "Name": "Mail zum 1. Tag im B\u00FCro, Vorabinformationen",
+        "TargetDate": "2024-10-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 28,
+        "RespId": 315,
+        "Resp": {
+          "Id": 315,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 124,
+        "Name": "Anlegen in der Time Machine, Einrichten Deskbot-Account und erfragen Mailadresse bei Ops",
+        "TargetDate": "2024-09-29T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 29,
+        "RespId": 316,
+        "Resp": {
+          "Id": 316,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 125,
+        "Name": "Eintr\u00E4ge Project Hero im Bereich \u0027Team\u0027",
+        "TargetDate": "2024-09-29T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 30,
+        "RespId": 317,
+        "Resp": {
+          "Id": 317,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 126,
+        "Name": "Kl\u00E4ren Zuordnung Monthly Peer mit GL-Runde",
+        "TargetDate": "2024-09-29T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 31,
+        "RespId": 318,
+        "Resp": {
+          "Id": 318,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 127,
+        "Name": "Kl\u00E4ren Zuordnung Buddy",
+        "TargetDate": "2024-09-29T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 32,
+        "RespId": 319,
+        "Resp": {
+          "Id": 319,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 128,
+        "Name": "Mail an Backoffice zur genauen Uhrzeit und Kleidergr\u00F6\u00DFe",
+        "TargetDate": "2024-09-29T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 33,
+        "RespId": 320,
+        "Resp": {
+          "Id": 320,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 129,
+        "Name": "Mail Ops wegen Ansprechpartner vor Ort",
+        "TargetDate": "2024-09-29T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 34,
+        "RespId": 321,
+        "Resp": {
+          "Id": 321,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 130,
+        "Name": "Mail Buddy wegen Anwesenheit im B\u00FCro",
+        "TargetDate": "2024-09-29T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 35,
+        "RespId": 322,
+        "Resp": {
+          "Id": 322,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 131,
+        "Name": "Brief ausdrucken",
+        "TargetDate": "2024-09-29T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 36,
+        "RespId": 323,
+        "Resp": {
+          "Id": 323,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 132,
+        "Name": "Willkommensmail an das Team \u00FCber alle@ versenden",
+        "TargetDate": "2024-09-29T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 38,
+        "RespId": 324,
+        "Resp": {
+          "Id": 324,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 133,
+        "Name": "Empfang durch Backoffice und People \u0026 Culture",
+        "TargetDate": "2024-10-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 39,
+        "RespId": 325,
+        "Resp": {
+          "Id": 325,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 134,
+        "Name": "\u00DCbergabe Package, Schl\u00FCssel, Karte und Hardware",
+        "TargetDate": "2024-10-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 40,
+        "RespId": 326,
+        "Resp": {
+          "Id": 326,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 135,
+        "Name": "Vorstellung Buddy",
+        "TargetDate": "2024-10-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 41,
+        "RespId": 327,
+        "Resp": {
+          "Id": 327,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 136,
+        "Name": "Begleitung durch Ops bei der Einrichtung PC",
+        "TargetDate": "2024-10-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 42,
+        "RespId": 328,
+        "Resp": {
+          "Id": 328,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 137,
+        "Name": "B\u00FCrof\u00FChrung, Vorstellung Kolleg*innen und Schl\u00FCssel-/ Karten\u00FCbergabe durch Backoffice",
+        "TargetDate": "2024-10-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 43,
+        "RespId": 329,
+        "Resp": {
+          "Id": 329,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 138,
+        "Name": "Gemeinsames Mittagessen mit Buddy",
+        "TargetDate": "2024-10-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 44,
+        "RespId": 330,
+        "Resp": {
+          "Id": 330,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 139,
+        "Name": " Erkl\u00E4rung Organisatorisches und fehlende Unterlagen (NachwG, Datenschutz) durch People \u0026 Culture",
+        "TargetDate": "2024-10-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 45,
+        "RespId": 331,
+        "Resp": {
+          "Id": 331,
+          "RoleId": 5,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 140,
+        "Name": "Einrichtung PC und Accounts abschlie\u00DFen inkl. Erstellung Sicherungskopie mit Ops",
+        "TargetDate": "2024-10-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 46,
+        "RespId": 332,
+        "Resp": {
+          "Id": 332,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 141,
+        "Name": "Begr\u00FC\u00DFung im Weekly",
+        "TargetDate": "2024-10-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 47,
+        "RespId": 333,
+        "Resp": {
+          "Id": 333,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 142,
+        "Name": "Angekommen? Erwartungen? Fragen? Onboarding-Card 2. Teil? (People \u0026 Culture)",
+        "TargetDate": "2024-11-03T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 48,
+        "RespId": 334,
+        "Resp": {
+          "Id": 334,
+          "RoleId": 5,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 143,
+        "Name": "Angekommen? Erwartungen und Zufriedenheit? Verbesserungsvorschl\u00E4ge?",
+        "TargetDate": "2025-01-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 49,
+        "RespId": 335,
+        "Resp": {
+          "Id": 335,
+          "RoleId": 5,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 144,
+        "Name": "Angekommen? Perspektiven? Probezeitende",
+        "TargetDate": "2025-04-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 50,
+        "RespId": 336,
+        "Resp": {
+          "Id": 336,
+          "RoleId": 4,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 145,
+        "Name": "Termine f\u00FCr Onboarding-Gespr\u00E4che",
+        "TargetDate": "2025-04-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 51,
+        "RespId": 337,
+        "Resp": {
+          "Id": 337,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 146,
+        "Name": "Termine f\u00FCr Probezeit und Festanstellung Trainee",
+        "TargetDate": "2025-04-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 52,
+        "RespId": 338,
+        "Resp": {
+          "Id": 338,
+          "RoleId": null,
+          "UserId": 9,
+          "TaskRespType": 3
+        }
+      },
+      {
+        "Id": 147,
+        "Name": "Create Gitlab-account",
+        "TargetDate": "2024-10-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 53,
+        "RespId": 339,
+        "Resp": {
+          "Id": 339,
+          "RoleId": 2,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 148,
+        "Name": "Invite user to card decks",
+        "TargetDate": "2024-10-13T12:00:00",
+        "IsArchived": false,
+        "Status": 2,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 54,
+        "RespId": 340,
+        "Resp": {
+          "Id": 340,
+          "RoleId": 2,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      },
+      {
+        "Id": 149,
+        "Name": "Request an invite in Slack",
+        "TargetDate": "2024-10-13T12:00:00",
+        "IsArchived": false,
+        "Status": 0,
+        "Notes": [],
+        "ProcedureId": 5,
+        "TemplateId": 55,
+        "RespId": 341,
+        "Resp": {
+          "Id": 341,
+          "RoleId": 2,
+          "UserId": null,
+          "TaskRespType": 2
+        }
+      }
+    ],
+    "OrderedTaskInstIds": "102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149",
+    "TemplateId": 1,
+    "FutureDepartmentId": 1,
+    "RespId": 9,
+    "ReferId": 11
+  }
+]

@@ -1,0 +1,101 @@
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    margin: auto;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #FF0844, #FFB199);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reset-container {
+    width: 80%;
+}
+
+.form-group + .form-group {
+    margin-top: 0.5rem;
+}
+
+.form-group label {
+    width: 100%;
+    text-align: left;
+}
+
+.form-control {
+    border-radius: 10px;
+    background-color: transparent;
+    border-color: var(--replay-licorice);
+    width: 12rem;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.login-button {
+    background-color: var(--replay-licorice);
+    border-color: var(--replay-licorice);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset-button {
+    background-color: var(--replay-licorice);
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: none;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.reset-button:hover {
+    color: transparent;
+}
+
+.reset-button::before {
+    content: "Speichern";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #FF0844 0%, #FFB199 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.reset-button:hover::before {
+    opacity: 1;
+}
+
+.login-button:hover {
+    cursor: pointer;
+}
+
+#userName {
+    margin-bottom: 10px;
+}

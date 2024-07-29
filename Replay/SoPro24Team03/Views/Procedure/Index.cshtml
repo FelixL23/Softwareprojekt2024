@@ -1,0 +1,35 @@
+@model SoPro24Team03.ViewModels.ProcedureViewModel
+@{
+    ViewData["Title"] = "Vorgänge";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Bezugsperson</th>
+            <th scope="col">Verantwortlicher</th>
+            <th scope="col">Zieldatum</th>
+            <th scope="col">Aufgaben erledigt</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var proc in Model.Procedures)
+        {
+        <tr style="@(proc.IsOverdue() ? "color:red; font-weight:bold;" : "")" >
+            <th scope="row">@proc.Id</th>
+            <td>@proc.Name</td>
+            <td>@proc.Refer!.FirstName @proc.Refer.LastName</td>
+            <td>@proc.Resp.FirstName @proc.Resp.LastName</td>
+            <td>@proc.TargetDate</td>
+            <td id="taskCount">@proc.NumTasksDone / @proc.NumTasksTotal</td>
+            <td><a class="btn btn-primary" title="bearbeiten" asp-area="" asp-controller="Procedure" asp-action="Edit" asp-route-id="@proc.Id">
+                    <i class="bi bi-pencil"> </i>
+                </a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

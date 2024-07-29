@@ -1,0 +1,30 @@
+@model SoPro24Team03.ViewModels.DeleteTaskInstViewModel
+@{
+    ViewData["Title"] = "Aufgabe löschen";
+}
+
+<div class="row m-2">
+    <h4>@Model.Name</h4>
+    <p>Zieldatum: @Model.TargetDate</p>
+    <p>Status: @Model.Status.GetDisplayName()</p>
+    <p>Zuständiger: @Model.RespStr</p>
+</div>
+
+<div class="row m-2">
+    <div class="col-md-4">
+        <form asp-action="Delete">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group pb-3">
+                <input type="submit" value="Löschen" class="btn btn-danger" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="container m-2">
+    <a asp-action="Index">Zurück zur Übersicht</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

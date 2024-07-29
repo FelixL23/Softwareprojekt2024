@@ -1,0 +1,73 @@
+[
+  {
+    "Id": 1,
+    "Name": "Onboarding",
+    "IsArchived": false,
+    "TaskTemplates": [
+      {
+        "Id": 1,
+        "Name": "Create Accounts",
+        "IsArchived": false,
+        "Instruction": "",
+        "DueType": 2,
+        "CustomDays": 0,
+        "TaskResponsible": null,
+        "TaskResponsibleId": 1,
+        "Departments": [],
+        "ContractTypes": [
+          3
+        ]
+      }
+    ],
+    "OrderedTaskTemplateIds": "1",
+    "Roles": [
+      {
+        "Id": 1,
+        "Name": "Administratoren",
+        "IsAdmin": true
+      },
+      {
+        "Id": 4,
+        "Name": "Gesch\u00E4ftsleitung",
+        "IsAdmin": false
+      },
+      {
+        "Id": 5,
+        "Name": "Personal",
+        "IsAdmin": false
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "Name": "Prokrastinieren",
+    "IsArchived": false,
+    "TaskTemplates": [
+      {
+        "Id": 2,
+        "Name": "D\u00E4umchen Drehen",
+        "IsArchived": false,
+        "Instruction": "## Wichtig\r\nwichtig\r\n**sehr wichtig**",
+        "DueType": 2,
+        "CustomDays": 0,
+        "TaskResponsible": null,
+        "TaskResponsibleId": 3,
+        "Departments": [],
+        "ContractTypes": []
+      }
+    ],
+    "OrderedTaskTemplateIds": "2",
+    "Roles": [
+      {
+        "Id": 1,
+        "Name": "Administratoren",
+        "IsAdmin": true
+      },
+      {
+        "Id": 4,
+        "Name": "Gesch\u00E4ftsleitung",
+        "IsAdmin": false
+      }
+    ]
+  }
+]

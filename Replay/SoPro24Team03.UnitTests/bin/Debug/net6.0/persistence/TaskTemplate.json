@@ -1,0 +1,96 @@
+[
+  {
+    "Id": 1,
+    "Name": "Create Accounts",
+    "IsArchived": false,
+    "Instruction": "",
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 1,
+      "RoleId": 2,
+      "UserId": null,
+      "TaskRespType": 2
+    },
+    "TaskResponsibleId": 1,
+    "Departments": [],
+    "ContractTypes": [
+      3
+    ]
+  },
+  {
+    "Id": 2,
+    "Name": "D\u00E4umchen Drehen",
+    "IsArchived": false,
+    "Instruction": "## Wichtig\r\nwichtig\r\n**sehr wichtig**",
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 3,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 3,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 3,
+    "Name": "TestTaskTempl1",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 2,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 6,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 0
+    },
+    "TaskResponsibleId": 6,
+    "Departments": [],
+    "ContractTypes": []
+  },
+  {
+    "Id": 4,
+    "Name": "TestTaskTempl2",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 3,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 7,
+      "RoleId": null,
+      "UserId": null,
+      "TaskRespType": 1
+    },
+    "TaskResponsibleId": 7,
+    "Departments": [],
+    "ContractTypes": [
+      0
+    ]
+  },
+  {
+    "Id": 5,
+    "Name": "TestTaskTempl3",
+    "IsArchived": false,
+    "Instruction": null,
+    "DueType": 1,
+    "CustomDays": 0,
+    "TaskResponsible": {
+      "Id": 8,
+      "RoleId": 2,
+      "UserId": null,
+      "TaskRespType": 2
+    },
+    "TaskResponsibleId": 8,
+    "Departments": [
+      {
+        "Id": 5,
+        "Name": "Backoffice"
+      }
+    ],
+    "ContractTypes": []
+  }
+]

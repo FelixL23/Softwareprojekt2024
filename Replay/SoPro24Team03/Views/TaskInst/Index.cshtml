@@ -1,0 +1,79 @@
+@model SoPro24Team03.ViewModels.TaskInstViewModel
+@{
+    ViewData["Title"] = "Aufgaben";
+}
+
+
+<div class="d-flex">
+    <form asp-action="Index" method="get">
+        <div class="d-flex flex-shrink flex-row m-2 border rounded-3">
+            <div class="flex-grow m-3">
+                <label class="form-label" for="TaskName">Name: </label>
+                <input id="TaskNameInput" class="form-control" type="text" asp-for="TaskName" />
+            </div>
+
+            <div class="flex-grow m-3">
+                <label class="form-label" for="ProcedureSelect">Vorgang: </label>
+                <select id="ProcedureSelect" class="form-select" asp-for="ProcedureId" asp-items="Model.MyProcedures">
+                    <option value="" selected>-</option>
+                </select>
+            </div>
+            
+            <div class="flex-grow m-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" asp-for="level" value="0" />
+                    <label class="form-check-label">
+                        nur persönlich zuständig
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" asp-for="level" value="1" />
+                    <label class="form-check-label">
+                        auch Rollen und Vorgänge
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" asp-for="level" value="2" disabled="@(!(Model.isAdmin ?? false))" />
+                    <label class="form-check-label">
+                        Alle (nur Admin)
+                    </label>
+                </div>
+            </div>
+
+            <div class="flex-grow m-3 align-content-center">
+                <input class="btn btn-primary" type="submit" value="Filtern" />
+            </div>
+        </div>
+    </form>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Vorgang</th>
+            <th scope="col">Zuständiger</th>
+            <th scope="col">Zieldatum</th>
+            <th scope="col">Status</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var task in Model.Tasks)
+        {
+        <tr style="@(task.isOverdue() ? "color:red; font-weight:bold;" : "")" id="taskRow" data-overdue="@task.isOverdue()">
+            <th scope="row">@task.Id</th>
+            <td id="taskName">@task.Name</td>
+            <td>@task.Procedure.Name (@task.Procedure.Refer!.FirstName @task.Procedure.Refer.LastName)</td>
+            <td>@task.Resp.DisplayName()</td>
+            <td>@task.TargetDate</td>
+            <td id="taskStatus">@task.Status.GetDisplayName()</td>
+            <td><a class="btn btn-primary" title="bearbeiten" asp-area="" asp-controller="TaskInst" asp-action="Edit" asp-route-id="@task.Id">
+                    <i class="bi bi-pencil"> </i>
+                </a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

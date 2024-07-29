@@ -1,0 +1,63 @@
+image: mcr.microsoft.com/dotnet/sdk:6.0
+
+stages:
+  - build
+  - test_unit
+  - test_e2e
+  - deploy
+
+build:
+  stage: build
+  tags:
+    - sopro
+  script:
+    - dotnet build ${CI_PROJECT_DIR}/Replay/SoPro24Team03
+
+unit_test:
+  stage: test_unit
+  tags:
+    - sopro
+  script:
+    - dotnet test ${CI_PROJECT_DIR}/Replay/SoPro24Team03.UnitTests
+
+frontend_test:
+  stage: test_e2e
+  tags:
+    - sopro
+  before_script:
+    - ${CI_PROJECT_DIR}/Replay/SoPro24Team03.E2ETests/install_chrome.sh
+  script:
+    - dotnet run --project ${CI_PROJECT_DIR}/Replay/SoPro24Team03 -it --shm-size=2gb -c Release &
+    - sleep 20;  # Wartezeit bis die Anwendung gestartet ist
+    - xvfb-run -a dotnet test ${CI_PROJECT_DIR}/Replay/SoPro24Team03.E2ETests
+
+
+kaniko-build-replay:
+  tags:
+  - sopro
+
+  variables:
+    # Additional options for Kaniko executor.
+    # For more details see https://github.com/GoogleContainerTools/kaniko/blob/master/README.md#additional-flags
+    KANIKO_ARGS: "--single-snapshot"
+    KANIKO_BUILD_CONTEXT: ${CI_PROJECT_DIR}/Replay/SoPro24Team03
+    IMAGE_TAG_NAME: replay:latest
+  stage: deploy
+  image:
+    # For latest releases see https://github.com/GoogleContainerTools/kaniko/releases
+    # Only debug/*-debug versions of the Kaniko image are known to work within Gitlab CI
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  script:
+    - export IMAGE_TAG=${CI_REGISTRY_IMAGE}/${IMAGE_TAG_NAME}
+    - echo $IMAGE_TAG
+    - mkdir -p /kaniko/.docker
+    # Write credentials to access Gitlab Container Registry within the runner/ci
+    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"auth\":\"$(echo -n ${CI_REGISTRY_USER}:${CI_REGISTRY_PASSWORD} | base64 | tr -d '\n')\"}}}" > /kaniko/.docker/config.json
+    # Build and push the container. To disable push add --no-push
+    - DOCKERFILE_PATH=${DOCKERFILE_PATH:-"$KANIKO_BUILD_CONTEXT/Dockerfile"}
+    - /kaniko/executor --context $KANIKO_BUILD_CONTEXT --dockerfile $DOCKERFILE_PATH --destination $IMAGE_TAG $KANIKO_ARGS
+  # Run this job in a branch/tag where a Dockerfile exists
+  rules:
+    - exists:
+        - Replay/SoPro24Team03/Dockerfile

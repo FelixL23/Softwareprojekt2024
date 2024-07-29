@@ -1,0 +1,6 @@
+@model string
+@using Markdig
+
+<div>
+    @Html.Raw(Markdown.ToHtml(Model.Replace("\n", "<br />")))
+</div>

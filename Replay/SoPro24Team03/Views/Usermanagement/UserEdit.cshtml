@@ -1,0 +1,142 @@
+@model SoPro24Team03.ViewModels.UserEditViewModel;
+
+@{
+    ViewBag.Title = "Benutzer bearbeiten";
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href='https://fonts.googleapis.com/css?family=League+Spartan:wght@700&family=Open+Sans:wght@300..800&display=Swap'
+        rel='stylesheet'>
+    <link rel="stylesheet" href="~/css/replay.css"/>
+</head>
+
+<body>
+    <div class="main-content">
+        <div class="edit-user">
+            <div class="user-details">
+                <form asp-action="UserEdit" method="post">
+                    <h2>@Model.FirstName @Model.LastName </h2>
+
+                    <input type="hidden" asp-for="UserName" />
+                    <input type="hidden" asp-for="FirstName" />
+                    <input type="hidden" asp-for="LastName" />
+                    <input type="hidden" asp-for="PasswordHash" />
+                    
+                    <div class="form-group">
+                        <label class="control-label">User Name:</label>
+                        <input asp-for="UserName" class="form-control" disabled/>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Geburtsdatum:</label>
+                        <input asp-for="DateOfBirth" class="form-control" type="date"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Vertragsbeginn:</label>
+                        <input asp-for="ContractStart" class="form-control" type="date"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="ContractType" class="control-label">Vertragsart:</label>
+                        <select asp-for="ContractType" class="form-control" asp-items="Model.ContractTypeList">
+                            <option value="">bitte auswählen</option>
+                        </select>
+                        <span asp-validation-for="ContractType" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Rolle:</label>
+                        <select asp-for="SelectedRoleIds" class="role-select" multiple="multiple" asp-items="Model.Roles"></select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Abteilung:</label>
+                        <select asp-for="SelectedDepartmentId" asp-items="@Model.AllDepartments"></select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">e-Mail:</label>
+                        <input asp-for="EmailAddress" class="form-control"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Gesperrt:</label>
+                        <input asp-for="isSuspended" type="checkbox"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Archiviert:</label>
+                        <input asp-for="isArchived" type="checkbox"/>
+                    </div>
+
+                        <div class="user-notes">
+                            <h3>Notizen:</h3>
+                            <textarea rows="3" cols="40" ></textarea>
+                        </div>
+                    <div class="form-group">
+                        <a class="btn btn-cancel" asp-area="" asp-controller="Usermanagement" asp-action="UserOverview">Änderungen verwerfen</a>
+                        <button type="submit" class="btn btn-primary" asp-controller="Usermanagement" asp-action="UserEdit">Änderungen speichern</button>
+                    </div>
+               </form>
+            </div>
+            
+            
+        </div>
+        
+    </div>
+</body>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        $(document).ready(function() {
+            $('.role-select').select2();
+        })
+    </script>
+}
+
+
+<style>
+    body {
+        background-color: #4d5456;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .edit-user {
+        display: flex;
+        justify-content: space-between;
+        background-color: #AFAFAF;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .user-details {
+        flex: 1;
+    }
+
+    .form-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .form-group label {
+        width: 150px; 
+        margin-right: 10px; 
+    }
+
+    .user-notes {
+        flex: 1;
+        align-items: bottom;
+    }
+
+</style>

@@ -1,0 +1,178 @@
+@model SoPro24Team03.ViewModels.EditTaskInstViewModel
+@{
+    ViewData["Title"] = "Aufgabe bearbeiten";
+}
+@using Markdig
+
+
+<div class="row m-2">
+    <div class="col-md-4">
+        <div class="form-group pb-3">
+            <span>Anleitung:&nbsp;&nbsp;
+                @if (String.IsNullOrEmpty(Model.Instruction))
+                {
+                    @:[keine]
+                }
+                else
+                {
+                    <a id="instruction-show-link" title="Anleitung anzeigen" onclick="loadContent(this)" href="#" 
+                        data-title="Anleitung" data-text="@Html.Raw(Markdown.ToHtml(@Model.Instruction.Replace("\n", "<br />")))">
+                        anzeigen
+                    </a>
+                }
+            </span>
+        </div>
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group pb-3">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" readonly="@(Model.PermissionLevel < 3)" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group pb-3">
+                <label asp-for="TargetDate" class="control-label"></label>
+                <input asp-for="TargetDate" class="form-control" readonly="@(Model.PermissionLevel < 2)" />
+                <span asp-validation-for="TargetDate" class="text-danger"></span>
+            </div>
+            <div class="form-group pb-3">
+                <label asp-for="Status" class="control-label"></label>
+                <select asp-for="Status" asp-items="Html.GetEnumSelectList<CompletionStatus>()"></select>
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+
+            <div class="form-group pb-4">
+                <label class="control-label">Zuständiger</label>
+                <select id="SelectRespType" asp-for="TaskRespType">
+                    <option value="@TaskRespType.role">@TaskRespType.role.GetDisplayName()</option>
+                    <option value="@TaskRespType.user">@TaskRespType.user.GetDisplayName()</option>
+                </select>
+                <span asp-validation-for="TaskRespType" class="text-danger"></span>
+                <br>
+
+                <div id="SelectRespRole" class="pt-1" style="display: none;">
+                    <select asp-for="RespRoleId" asp-items="Model.AllRoles"></select>
+                    <span asp-validation-for="RespRoleId" class="text-danger"></span>
+                </div>
+
+                <div id="SelectRespUser" class="pt-1" style="display: none;">
+                    <select asp-for="RespUserId" asp-items="Model.AllUsers"></select>
+                    <span asp-validation-for="RespUserId" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group pb-4">
+                <input type="submit" value="Speichern" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+
+
+    <div class="col-md border rounded-3">
+        <h3>Notizen</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Titel</th>
+                    <th scope="col">Autor</th>
+                    <th scope="col">Datum</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var note in Model.Notes!) {
+                    if (note.IsVisible(Model.UserId!.Value)) {
+                    <tr>
+                        <th scope="row">@note.Id</th>
+                        <td>@note.Title</td>
+                        <td>@note.Author.FirstName @note.Author.LastName</td>
+                        <td>@note.CreationDate</td>
+                        <td class="text-nowrap">
+                            <button id="note-text-button" type="button" class="btn btn-primary" title="Inhalt anzeigen"
+                                onclick="loadContent(this)" data-id="@note.Id" data-title="@note.Title" data-text="@Html.Raw(Markdown.ToHtml(@note.Text.Replace("\n", "<br />")))">
+                                <i class="bi bi-info-circle"> </i>
+                            </button>
+                            <a class="btn btn-primary" title="bearbeiten" asp-area="" asp-controller="TaskInst" asp-action="EditNote" asp-route-id="@note.Id">
+                                <i class="bi bi-pencil"> </i>
+                            </a>
+                            <a class="btn btn-primary" title="löschen" asp-area="" asp-controller="TaskInst" asp-action="DeleteNote" asp-route-id="@note.Id">
+                                <i class="bi bi-trash"> </i>
+                            </a>
+                        </td>
+                    </tr>
+                    }
+                }
+            </tbody>
+        </table>
+        <div class="d-flex justify-content-center m-2">
+            <a class="btn btn-primary" title="Neue Notiz hinzufügen" asp-area="" asp-controller="TaskInst" asp-action="CreateNote" asp-route-id="@Model.TaskInstId">
+                <i class="bi bi-plus"> </i>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container m-2">
+    <a asp-action="Index">Zurück zur Übersicht</a>
+</div>
+
+
+<div id="NoteModal" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 id="NoteModalTitle" class="modal-title"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div id="note-container" class="modal-body">
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        $(document).ready(function() {
+            var preSelectedType = $('#SelectRespType').val()
+            if (preSelectedType === "role") {
+                $('#SelectRespRole').show();
+            }
+            else if (preSelectedType === "user") {
+                $('#SelectRespUser').show();
+            }
+
+            $('#SelectRespType').change(function() {
+                var selectedType = $(this).val();
+
+                if (selectedType === "role") {
+                    $('#SelectRespRole').show();
+                    $('#SelectRespUser').hide();
+                }
+                else if (selectedType === "user") {
+                    $('#SelectRespRole').hide();
+                    $('#SelectRespUser').show();
+                }
+            })
+        })
+
+        function loadContent(button) {
+            var id = button.getAttribute("data-id");
+            var title = button.getAttribute("data-title");
+            var text = button.getAttribute("data-text");
+
+            $("#NoteModalTitle").html(title);
+            $("#note-container").html(text);
+
+            $('#NoteModal').modal('show');
+        }
+    </script>
+}

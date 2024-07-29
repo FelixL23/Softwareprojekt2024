@@ -1,0 +1,62 @@
+:root {
+    --replay-licorice: #141210;
+    --replay-amaranth: #e61d47;
+    --replay-pink: #FF0844;
+    --replay-peach: #FFB199;
+    --replay-white: #FFFFFF;
+    --replay-grey1: #DBDBDB;
+    --replay-grey2: #AFAFAF;
+    --replay-grey3: #626262;
+
+    --replay-primary: var(--replay-grey1);
+    --replay-secondary: #4d5456;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'League Spartan';
+    font-weight: 700;
+    margin: 0;
+}
+
+html, body {
+    min-height: 100%;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+.nav-brand {
+    background: linear-gradient(90deg, #FF0844 0%, #FFB199 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav, .nav-header {
+    background-color: var(--replay-licorice);
+}
+
+.bg-primary {
+    background-color: var(--replay-primary) !important;
+}
+
+.text-primary {
+    color: var(--replay-grey3) !important;
+}
+
+.text-secondary {
+    color: var(--replay-grey1) !important;
+}
+
+.btn-primary{
+    background-color: var(--replay-licorice);
+    color: #fff;
+}
+
+.btn-secondary{
+    background-color: var(--replay-white);
+    color: #000;
+}
+
+.btn-cancel{
+    background-color: var(--replay-amaranth);
+    color: #fff;
+}

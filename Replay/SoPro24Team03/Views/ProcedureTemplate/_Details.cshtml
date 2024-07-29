@@ -1,0 +1,80 @@
+@model SoPro24Team03.ViewModels.DetailsProcTemplViewModel;
+
+<style>
+    #container {
+        background-color: var(--replay-grey1);
+    }
+
+    .sortable {
+        list-style-type: none;
+    }
+
+    .sortable-item {
+        -webkit-user-select: none;
+        user-select: none;
+    }
+</style>
+
+<div id="container" class="text-center rounded p-3" style="min-height: 100%;">
+    <h5 class="fs-4 font-bold">@Model.Name</h5>
+    <div class="row row-cols-2" style="min-height: 100%;">
+        <div>
+            <div class="d-flex align-items-center flex-column justify-content-between" style="height: 100%;">
+                <div>
+                    <h5>
+                        Rollen mit Zugriffsberechtigung:
+                    </h5>
+                    @if (Model.Roles.Count() == 0)
+                    {
+                        <span>Keine Rollen vergeben!</span>
+                    }
+                    else
+                    {
+                        <ul class="p-3" style="width: max-content;">
+                            @foreach (var Role in Model.Roles)
+                            {
+                                <li class="py-2 px-4 rounded">@Role.Name</li>
+                            }
+                        </ul>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-column gap-2" style="min-height: 100%;">
+            <h5 class="fs-4">Aufgaben</h5>
+            @if (Model.TaskTemplates == null || Model.TaskTemplates.Count() == 0)
+            {
+                <span>Keine Aufgaben vorhanden!</span>
+            }
+            else
+            {
+                <div class="p-3 rounded container bg-secondary d-flex flex-column gap-3 flex-fill">
+                    @foreach (var Task in @Model.TaskTemplates)
+                    {
+                        <div class="bg-primary py-2 px-4 rounded">@Task.Name</div>
+                    }
+                </div>
+            }
+            <div class="d-flex justify-content-evenly">
+                <a class="btn btn-primary" asp-area="" asp-controller="Procedure" asp-action="Create"
+                    asp-route-id="@Model.Id">
+                    Vorgang starten
+                </a>
+                <a class="btn" asp-area="" asp-controller="ProcedureTemplate" asp-action="Edit"
+                    asp-route-id="@Model.Id">
+                    Bearbeiten
+                    <i class="bi bi-pencil ps-2"></i>
+                </a>
+                <form asp-action="Delete" asp-route-id="@Model.Id">
+                    <button type="submit" class="btn">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
